@@ -1,0 +1,12 @@
+@import url(./home.css);
+@import url(./contact.css);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
