@@ -9,7 +9,7 @@ export const Header = () => {
       <ul className="header__ul">
         <span className="header__span__long"></span>
         <li className="header__li">
-          <Link to={"/home"}>Hem</Link>
+          <Link to={"/"}>Hem</Link>
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">
