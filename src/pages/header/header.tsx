@@ -13,7 +13,7 @@ export const Header = () => {
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">
-          <Link to={"/book"}>Boka bord</Link>
+          <Link to={"/booking"}>Boka bord</Link>
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">

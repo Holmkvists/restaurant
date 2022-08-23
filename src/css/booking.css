@@ -1,0 +1,29 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.hero__container {
+  background-image: url("../../public/assets/resturant.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__filter {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.175);
+}
+
+.booking__square {
+  height: 400px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: palevioletred;
+  border-radius: 10px;
+}
