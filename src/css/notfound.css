@@ -1,0 +1,26 @@
+.container {
+  background-image: url("../../public/assets/warning.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.notfound__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notfound__btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  position: relative;
+  left: 200px;
+}
+.notfound__btn:hover {
+  text-decoration-line: none;
+}
