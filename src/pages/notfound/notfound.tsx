@@ -1,7 +1,16 @@
+import { Link } from "react-router-dom";
+import "../../css/notfound.css";
+
 export const NotFound = () => {
   return (
-    <div>
-      <h1>OPS, sidan hittades inte, 404.</h1>
+    <div className="container">
+      <div className="notfound__container">
+        <h1 className="notfound__heading">Oops, något blev fel,</h1>
+        <h1 className="notfound__heading">sidan hittades inte!</h1>
+        <Link className="notfound__btn" to={"/"}>
+          Tillbaka hem
+        </Link>
+      </div>
     </div>
   );
 };
