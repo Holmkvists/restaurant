@@ -22,7 +22,7 @@
   text-decoration: none;
   color: #ffc1d1;
   text-decoration-style: none;
-  font-size: 180%;
+  font-size: 1.6rem;
   width: 100%;
   margin: 5px;
   font-weight: 100;
@@ -60,13 +60,13 @@
   .header__span__long {
     background-color: #ffc1d1;
     width: 25%;
-    height: 5px;
+    height: 4px;
     flex-grow: 1;
   }
   .header__span__short {
     background-color: #ffc1d1;
     width: 6%;
-    height: 5px;
+    height: 4px;
   }
   .header__ul {
     width: 100%;
