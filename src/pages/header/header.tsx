@@ -9,15 +9,21 @@ export const Header = () => {
       <ul className="header__ul">
         <span className="header__span__long"></span>
         <li className="header__li">
-          <Link to={"/"}>Hem</Link>
+          <Link className="animation" to={"/"}>
+            Hem
+          </Link>
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">
-          <Link to={"/booking"}>Boka bord</Link>
+          <Link className="animation" to={"/booking"}>
+            Boka bord
+          </Link>
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">
-          <Link to={"/contact"}>Kontakt</Link>
+          <Link className="animation" to={"/contact"}>
+            Kontakt
+          </Link>
         </li>
         <span className="header__span__long"></span>
       </ul>
