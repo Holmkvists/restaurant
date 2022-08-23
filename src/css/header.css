@@ -16,7 +16,7 @@
 }
 
 /* HEADER UNDERLINE ANIMATION */
-a {
+.animation {
   position: relative;
   color: #000;
   text-decoration: none;
@@ -26,7 +26,7 @@ a {
   width: 100%;
 }
 
-a::before {
+.animation::before {
   content: "";
   position: absolute;
   display: block;
@@ -40,7 +40,7 @@ a::before {
   transition: transform 0.3s ease;
 }
 
-a:hover::before {
+.animation:hover::before {
   transform: scaleX(1);
 }
 /* HEADER UNDERLINE ANIMATION */
@@ -53,7 +53,6 @@ a:hover::before {
 
 @media only screen and (min-width: 768px) {
   .mobile__headerline {
-    /* background-color: rgba(240, 248, 255, 0); */
     display: none;
   }
   .header__span__long {
@@ -76,7 +75,4 @@ a:hover::before {
     height: 70px;
     align-items: center;
   }
-}
-
-@media only screen and (min-width: 900px) {
 }
