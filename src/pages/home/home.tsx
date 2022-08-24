@@ -1,4 +1,3 @@
-import "../../css/home.css";
 import { Link } from "react-router-dom";
 import { Address } from "../../components/address/address";
 
