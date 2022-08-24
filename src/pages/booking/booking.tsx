@@ -4,12 +4,19 @@ import { IBooking } from "../../models/Ibooking";
 import { Header } from "../header/header";
 
 export const Booking = () => {
-  const [bookings, setBookings] = useState<IBooking[]>([]);
-
-  const url = "http://www.omdbapi.com/?apikey=416ed51a&s=Star";
+  const [bookings, setBookings] = useState({
+    date: 0,
+    time: 0,
+    userId: "",
+    visitors: 0,
+    tables: 0,
+    name: "",
+    phone: 0,
+    email: "",
+  });
 
   useEffect(() => {
-    fetch(url)
+    fetch("")
       .then((response) => response.json())
       .then((bookings) => {
         setBookings(bookings);
