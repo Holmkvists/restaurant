@@ -1,0 +1,18 @@
+/* COMPONENTS */
+@import url(../../components/address/styles/address.css);
+/* PAGES */
+@import url(../../pages/home/styles/home.css);
+@import url(../../pages/header/styles/header.css);
+@import url(../../pages/contact/styles/contact.css);
+@import url(../../pages/notfound/styles/notfound.css);
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  font-family: "Overpass";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+} /*# sourceMappingURL=main.css.map */
