@@ -1,4 +1,4 @@
-import "../../css/contact.css";
+import "../contact/styles/contact.css";
 import { Header } from "../header/header";
 export const Contact = () => {
   return (

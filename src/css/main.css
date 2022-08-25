@@ -5,10 +5,13 @@
 /* PAGES */
 
 @import url(./home.css);
-@import url(./contact.css);
+/* @import url(./contact.css); */
+
+@import url(../pages/header/styles/header.css);
+@import url(../pages/contact/styles/contact.css);
+@import url(../pages/notfound/styles/notfound.css);
 
 /* GLOBAL */
-
 * {
   box-sizing: border-box;
   font-family: "Overpass";
