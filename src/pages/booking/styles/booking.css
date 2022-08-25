@@ -1,16 +1,11 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-}
-
 .hero__container {
-  background-image: url("../../public/assets/resturant.jpeg");
+  background-image: url("../../../../public/assets/resturant.jpeg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .hero__filter {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.175);
@@ -30,7 +25,6 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-
   background-color: rgba(216, 112, 147, 0.951);
   border-radius: 10px;
 }
@@ -76,8 +70,9 @@
   border: none;
   margin-top: 20px;
 }
+
 .submit__btn:hover {
   transform: scale(1.03);
   transition: 0.3s ease;
   background-color: grey;
-}
+}/*# sourceMappingURL=booking.css.map */

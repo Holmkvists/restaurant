@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import "../../css/booking.css";
-import { IBooking } from "../../models/Ibooking";
+import "../../pages/booking/styles/booking.css";
 import { Header } from "../header/header";
 
 export const Booking = () => {
@@ -15,14 +14,7 @@ export const Booking = () => {
     email: "",
   });
 
-  useEffect(() => {
-    fetch("")
-      .then((response) => response.json())
-      .then((bookings) => {
-        setBookings(bookings);
-        console.log(bookings);
-      });
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div>
