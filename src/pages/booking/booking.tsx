@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { GenericButton } from "../../components/button/genericButton";
 import "../../pages/booking/styles/booking.css";
 import { Header } from "../header/header";
 
@@ -13,6 +14,11 @@ export const Booking = () => {
     phone: 0,
     email: "",
   });
+
+  const handleClick = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("du klickade på nästa");
+  };
 
   return (
     <div>
@@ -44,7 +50,7 @@ export const Booking = () => {
                 </div>
                 <div className="submit__div">
                   <h4>Välj tid och datum för att se tillgänglighet</h4>
-                  <input type="submit" value="Nästa" className="submit__btn" />
+                  <GenericButton handleClick={handleClick} buttonText="Nästa" />
                 </div>
               </form>
             </div>
