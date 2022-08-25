@@ -14,8 +14,6 @@ export const Booking = () => {
     email: "",
   });
 
-  useEffect(() => {}, []);
-
   return (
     <div>
       <div className="hero__container">
