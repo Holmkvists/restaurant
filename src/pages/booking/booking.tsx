@@ -15,7 +15,7 @@ export const Booking = () => {
     email: "",
   });
 
-  const handleClick = (e: React.FormEvent) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
   };
 

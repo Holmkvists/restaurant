@@ -2,7 +2,7 @@ import "../button/styles/genericButton.css";
 
 interface IGenericProps {
   buttonText: string;
-  handleClick: (e: React.FormEvent) => void;
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const GenericButton = (props: IGenericProps) => {
