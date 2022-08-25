@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GenericButton } from "../../components/button/genericButton";
+import { GenericButton } from "../../components/GenericButton/GenericButton";
 import "../../pages/booking/styles/booking.css";
 import { Header } from "../header/header";
 
@@ -49,7 +49,9 @@ export const Booking = () => {
                 </div>
                 <div className="submit__div">
                   <h4>Välj tid och datum för att se tillgänglighet</h4>
-                  <GenericButton handleClick={handleClick} buttonText="Nästa" />
+                  <GenericButton size="m" handleClick={handleClick}>
+                    Nästa
+                  </GenericButton>
                 </div>
               </form>
             </div>
