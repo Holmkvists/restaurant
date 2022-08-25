@@ -17,7 +17,6 @@ export const Booking = () => {
 
   const handleClick = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("du klickade på nästa");
   };
 
   return (
