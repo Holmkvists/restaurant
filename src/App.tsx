@@ -1,4 +1,3 @@
-// import "./css/main.css";
 import "./main/styles/main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Contact } from "./pages/contact/contact";
