@@ -1,4 +1,5 @@
-.hero__container {
+@import "../../../variables/variables.css";
+.hero-container {
   background-image: url("../../../../public/assets/resturant.jpeg");
   height: 100vh;
   background-position: center;
@@ -6,73 +7,41 @@
   background-size: cover;
 }
 
-.hero__filter {
+.hero-filter {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.175);
 }
 
-.booking__container {
+.booking-content {
   display: flex;
   align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.form-container {
+  background-color: rgba(255, 192, 203, 0.945);
+  width: 480px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 140px;
-}
-
-.booking__square {
-  height: 340px;
-  width: 600px;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  background-color: rgba(216, 112, 147, 0.951);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-.booking__heading {
-  text-decoration: underline;
-  padding: 10px;
-}
-
-.booking__form {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.booking__input {
-  display: flex;
-  flex-direction: column;
-}
-
-.form__container {
+.btnform-container {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 5px;
 }
 
-.booking__radiolabel {
-  display: flex;
-  flex-direction: column;
+.form-heading {
+  text-decoration: underline;
+  height: 40px;
 }
 
-.submit__div {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.submit__btn {
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  margin-top: 20px;
-}
-
-.submit__btn:hover {
-  transform: scale(1.03);
-  transition: 0.3s ease;
-  background-color: grey;
+.form-paragraph {
+  height: 140px;
+  text-decoration: none;
 }/*# sourceMappingURL=booking.css.map */

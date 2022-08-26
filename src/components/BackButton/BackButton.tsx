@@ -1,13 +1,14 @@
-import "./styles/genericButton.css";
+import "../GenericButton/styles/genericButton.css";
 
 interface IGenericProps {
   children: string;
   size: "s" | "m" | "l";
   fontSize: "s" | "m" | "l";
-  handleNextClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+
+  handleBackClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const GenericButton = (props: IGenericProps) => {
+export const BackButton = (props: IGenericProps) => {
   const styleObject = {
     width: props.size == "s" ? "50px" : props.size == "m" ? "100px" : "150px",
     fontSize: props.size == "s" ? "10px" : props.size == "m" ? "20px" : "30px",
@@ -17,7 +18,7 @@ export const GenericButton = (props: IGenericProps) => {
     <div>
       <button
         className="generic__btn"
-        onClick={props.handleNextClick}
+        onClick={props.handleBackClick}
         style={styleObject}
       >
         {props.children}
