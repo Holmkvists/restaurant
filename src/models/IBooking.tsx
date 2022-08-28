@@ -3,5 +3,5 @@ export interface IBooking {
   date: string;
   time: string;
   tables: string;
-  id: string;
+  _id: string;
 }
