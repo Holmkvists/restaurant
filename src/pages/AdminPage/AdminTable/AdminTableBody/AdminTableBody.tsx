@@ -10,7 +10,6 @@ export const AdminTableBody = () => {
     async function getBookings() {
       const bookings = await getAllBookings();
       setBookings(bookings);
-      console.log(bookings);
     }
     getBookings();
   }, []);
