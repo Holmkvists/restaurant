@@ -1,3 +1,4 @@
+@use "../../../variables/variables" as *;
 .hero__container {
   background-image: url("../../../../public/assets/resturant.jpeg");
   height: 100vh;
@@ -25,7 +26,7 @@
   align-items: center;
   flex-direction: column;
 
-  background-color: rgba(216, 112, 147, 0.951);
+  background-color: $darker-pink;
   border-radius: 10px;
 }
 
