@@ -11,7 +11,7 @@
   background-color: $light-pink;
   height: 100vh;
 
-  .logo-container {
+  .logo__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
     }
   }
 
-  .home-nav {
+  .home__nav {
     position: absolute;
     top: 35%;
     display: flex;
@@ -41,13 +41,13 @@
     width: 100%;
 
     .lines,
-    .lg-screen-lines {
+    .lg-screen__lines {
       height: 5px;
       width: 100%;
       background-color: $dark-pink;
     }
 
-    .lg-screen-lines {
+    .lg-screen__lines {
       display: none;
     }
 
@@ -66,11 +66,11 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .home-nav {
+  .home__nav {
     flex-direction: row;
     top: 45%;
 
-    .lg-screen-lines {
+    .lg__screen__lines {
       display: block;
       width: 30%;
     }
@@ -78,7 +78,7 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .logo-container {
+  .logo__container {
     margin-top: 60px;
 
     .logo {
@@ -91,7 +91,7 @@
     }
   }
 
-  .home-nav {
+  .home__nav {
     top: 50%;
 
     a {

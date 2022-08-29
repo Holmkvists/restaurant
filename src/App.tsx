@@ -2,9 +2,9 @@ import "./main/styles/main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Contact } from "./pages/contact/contact";
 import { NotFound } from "./pages/notfound/notfound";
-import { Home } from "./pages/home/home";
 import { Booking } from "./pages/booking/booking";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
+import { Home } from "pages/Home/Home";
 
 function App() {
   return (
