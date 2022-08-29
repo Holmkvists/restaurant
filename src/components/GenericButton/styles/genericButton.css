@@ -6,11 +6,9 @@
   color: white;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 200%;
 }
 .generic__btn:hover {
   color: #fff6f9;
