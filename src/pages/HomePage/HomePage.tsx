@@ -1,9 +1,9 @@
-import "./styles/home.css";
+import "./styles/homePage.css";
 import { Link } from "react-router-dom";
 import { Address } from "components/address/address";
 import "../../components/address/styles/address.css";
 
-export const Home = () => {
+export const HomePage = () => {
   return (
     <main className="home">
       <div className="logo__container">
