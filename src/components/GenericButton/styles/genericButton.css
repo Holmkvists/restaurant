@@ -11,10 +11,12 @@
   color: white;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .generic__btn:hover {
   color: #fff6f9;
   transform: scale(1.03);
   transition: 0.2s ease;
-}/*# sourceMappingURL=genericButton.css.map */
+} /*# sourceMappingURL=genericButton.css.map */
