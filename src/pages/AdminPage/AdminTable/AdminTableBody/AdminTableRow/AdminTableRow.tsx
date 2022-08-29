@@ -6,10 +6,10 @@ import "./styles/adminTableRow.css";
 
 export const AdminTableRow = (props: AdminTableRowProps) => {
   const id = props.booking._id;
-  const email = props.booking.email;
 
   const [date, setDate] = useState(props.booking.date);
   const [time, setTime] = useState(props.booking.time);
+  const [email, setEmail] = useState(props.booking.email);
   const [tables, setTables] = useState(props.booking.tables);
 
   const [isEditable, setIsEditable] = useState(false);
@@ -36,7 +36,14 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
   return (
     <tr>
       <td>{id}</td>
-      <td>{email}</td>
+      <td
+        style={style}
+        suppressContentEditableWarning
+        contentEditable={isEditable}
+        onBlur={(e) => setEmail(e.currentTarget.innerText)}
+      >
+        {email}
+      </td>
       <td
         style={style}
         suppressContentEditableWarning
