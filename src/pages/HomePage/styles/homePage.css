@@ -1,3 +1,4 @@
+@import url("../../../variables/_variables.scss");
 .home {
   display: flex;
   flex-direction: column;
@@ -5,29 +6,24 @@
   background-color: #fff6f9;
   height: 100vh;
 }
-
-.logo-container {
+.home .logo__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
 }
-
-.logo-container span {
-  font-size: 20pt;
-  margin-top: 15px;
-}
-
-.logo {
+.home .logo__container .logo {
   height: 110px;
   width: 60px;
 }
-
-.logo img {
+.home .logo__container .logo img {
   width: 100%;
 }
-
-.home-nav {
+.home .logo__container span {
+  font-size: 20pt;
+  margin-top: 15px;
+}
+.home .home__nav {
   position: absolute;
   top: 35%;
   display: flex;
@@ -35,55 +31,51 @@
   align-items: center;
   width: 100%;
 }
-
-.lines,
-.lg-screen-lines {
+.home .home__nav .lines,
+.home .home__nav .lg-screen__lines {
   height: 5px;
   width: 100%;
   background-color: #ffc1d1;
 }
-
-.lg-screen-lines {
+.home .home__nav .lg-screen__lines {
   display: none;
 }
-
-.home-nav a {
+.home .home__nav a {
   margin: 2rem;
   font-size: 16pt;
   text-decoration: none;
-  color: #000000;
+  color: black;
   white-space: nowrap;
 }
-
-.home-nav a:hover {
+.home .home__nav a:hover {
   color: #ffc1d1;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-nav {
+  .home__nav {
     flex-direction: row;
     top: 45%;
   }
-  .lg-screen-lines {
+  .home__nav .lg__screen__lines {
     display: block;
     width: 30%;
   }
 }
 @media only screen and (min-width: 900px) {
-  .logo-container {
+  .logo__container {
     margin-top: 60px;
   }
-  .logo-container span {
-    font-size: 24pt;
-  }
-  .logo {
+  .logo__container .logo {
     height: 155px;
     width: 85px;
   }
-  .home-nav {
+  .logo__container span {
+    font-size: 24pt;
+  }
+  .home__nav {
     top: 50%;
   }
-  .home-nav a {
+  .home__nav a {
     font-size: 20pt;
   }
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=homePage.css.map */
