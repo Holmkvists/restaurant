@@ -2,8 +2,9 @@ import "./main/styles/main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Contact } from "./pages/contact/contact";
 import { NotFound } from "./pages/notfound/notfound";
-import { Home } from "./pages/home/home";
 import { Booking } from "./pages/booking/booking";
+import { Home } from "./pages/Home/home";
+import { CancelledPage } from "./pages/CancelledPage/CancelledPage";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/book" element={<Booking />}></Route>
+        <Route path="/cancel" element={<CancelledPage />} />
         <Route path="adminPage" element={<AdminPage />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
