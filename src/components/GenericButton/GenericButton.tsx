@@ -13,7 +13,7 @@ export const GenericButton = (props: IGenericProps) => {
   };
 
   return (
-    <div>
+    <div className="generic__btn__div">
       <button
         className="generic__btn"
         onClick={props.handleClick}
