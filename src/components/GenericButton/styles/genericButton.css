@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+.test {
+  display: flex;
+  align-items: center;
+}
+
 .generic__btn {
   padding: 3px;
   cursor: pointer;
@@ -7,9 +12,6 @@
   border: none;
   border-radius: 5px;
   margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .generic__btn:hover {
   color: #fff6f9;

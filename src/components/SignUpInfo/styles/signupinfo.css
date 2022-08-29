@@ -1,1 +1,17 @@
-/*# sourceMappingURL=signupinfo.css.map */
+.user-input__container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 40px;
+}
+
+.user-input {
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 120%;
+}
+
+.user-input:focus {
+  outline: none;
+}/*# sourceMappingURL=signupinfo.css.map */

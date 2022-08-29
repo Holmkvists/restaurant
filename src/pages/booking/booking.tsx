@@ -39,29 +39,31 @@ export const Booking = () => {
     <div className="hero-container">
       <div className="hero-filter">
         <Header />
-        <div className="booking-content">
-          <div className="form-container">
-            <h1 className="form-heading">Boka bord!</h1>
-            <h4 className="form-heading">{formTitle[page]}</h4>
-            <div className="form-paragraph">{DisplayForm()}</div>
-            <div className="btnform-container">
-              <BackButton
-                size="m"
-                fontSize="m"
-                handleBackClick={handleBackClick}
-              >
-                Tillbaka
-              </BackButton>
-              <GenericButton
-                size="m"
-                fontSize="m"
-                handleNextClick={handleNextClick}
-              >
-                Nästa
-              </GenericButton>
+        <form action="">
+          <div className="booking-content">
+            <div className="form-container">
+              <h1 className="form-heading">Boka bord!</h1>
+              <h4 className="form-heading">{formTitle[page]}</h4>
+              <div className="form-paragraph">{DisplayForm()}</div>
+              <div className="btnform-container">
+                <BackButton
+                  size="m"
+                  fontSize="m"
+                  handleBackClick={handleBackClick}
+                >
+                  Tillbaka
+                </BackButton>
+                <GenericButton
+                  size="m"
+                  fontSize="m"
+                  handleNextClick={handleNextClick}
+                >
+                  Nästa
+                </GenericButton>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
