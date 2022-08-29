@@ -4,7 +4,7 @@ import { Contact } from "./pages/contact/contact";
 import { NotFound } from "./pages/notfound/notfound";
 import { Booking } from "./pages/booking/booking";
 import { Home } from "./pages/Home/home";
-import { CancelledBooking } from "./pages/CancelledPage/CancelledPage";
+import { CancelledPage } from "./pages/CancelledPage/CancelledPage";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/book" element={<Booking />}></Route>
-        <Route path="/cancel" element={<CancelledBooking />} />
+        <Route path="/cancel" element={<CancelledPage />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

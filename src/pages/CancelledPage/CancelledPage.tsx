@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Address } from "../../components/address/address";
 import "./styles/cancelledPage.css";
 
-export const CancelledBooking = () => {
+export const CancelledPage = () => {
   return (
     <main className="cancellation">
       <Header />
