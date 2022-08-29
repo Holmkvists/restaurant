@@ -31,6 +31,7 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       tables,
     };
     await patchBooking(booking);
+    handleEdit();
   };
 
   return (
