@@ -1,4 +1,4 @@
-import "../../pages/home/styles/home.css";
+import "./styles/home.css";
 import { Link } from "react-router-dom";
 import "../../components/address/styles/address.css";
 import { Address } from "../../components/address/address";

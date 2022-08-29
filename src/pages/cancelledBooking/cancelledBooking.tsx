@@ -1,6 +1,6 @@
+import { Header } from "../header/header";
 import { Link } from "react-router-dom";
 import { Address } from "../../components/address/address";
-import { Header } from "../header/header";
 import "./styles/cancelledBooking.css";
 
 export const CancelledBooking = () => {

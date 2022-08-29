@@ -2,8 +2,8 @@ import "./main/styles/main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Contact } from "./pages/contact/contact";
 import { NotFound } from "./pages/notfound/notfound";
-import { Home } from "./pages/home/home";
 import { Booking } from "./pages/booking/booking";
+import { Home } from "./pages/Home/home";
 import { CancelledBooking } from "./pages/CancelledBooking/CancelledBooking";
 
 function App() {
