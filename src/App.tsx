@@ -4,7 +4,7 @@ import { Contact } from "./pages/contact/contact";
 import { NotFound } from "./pages/notfound/notfound";
 import { Home } from "./pages/home/home";
 import { Booking } from "./pages/booking/booking";
-import { CancelledBooking } from "./pages/cancelledBooking/cancelledBooking";
+import { CancelledBooking } from "./pages/CancelledBooking/CancelledBooking";
 
 function App() {
   return (

@@ -6,19 +6,19 @@
   background-color: #fff6f9;
   height: 100vh;
 }
-.cancellation .cancellation-message {
+.cancellation .cancellation__message {
   position: absolute;
   top: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cancellation .cancellation-message img {
+.cancellation .cancellation__message img {
   height: 70px;
   width: 70px;
 }
-.cancellation .cancellation-message p,
-.cancellation .cancellation-message a {
+.cancellation .cancellation__message p,
+.cancellation .cancellation__message a {
   margin-top: 40px;
   width: 60%;
   text-align: center;
@@ -26,12 +26,12 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .cancellation-message img {
+  .cancellation__message img {
     height: 85px;
     width: 85px;
   }
-  .cancellation-message p,
-.cancellation-message a {
+  .cancellation__message p,
+.cancellation__message a {
     width: 100%;
     font-size: 22pt;
   }
