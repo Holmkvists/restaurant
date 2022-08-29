@@ -35,8 +35,8 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
 
   return (
     <tr>
-      <td>{email}</td>
       <td>{id}</td>
+      <td>{email}</td>
       <td
         style={style}
         suppressContentEditableWarning
