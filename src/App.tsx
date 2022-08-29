@@ -4,7 +4,6 @@ import { HomePage } from "pages/HomePage/HomePage";
 import { Contact } from "./pages/contact/contact";
 import { NotFound } from "./pages/notfound/notfound";
 import { Booking } from "./pages/booking/booking";
-import { Home } from "./pages/Home/home";
 import { CancelledPage } from "./pages/CancelledPage/CancelledPage";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 
