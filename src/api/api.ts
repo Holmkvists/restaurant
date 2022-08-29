@@ -40,3 +40,30 @@ export const patchBooking = async (booking: IBooking) => {
     return false;
   }
 };
+
+/**
+ * Attempt to authorize as an admin towards the API
+ * @param secret The secret given by a user
+ * @returns Object with success status and a message
+ */
+export const authorizeAdmin = async (secret: string) => {
+  try {
+    const response = await fetch(`${API_URL}/authorize`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ secret }),
+    });
+    if (response.status === 200) {
+      return { success: true, message: "" };
+    }
+    if (response.status === 401) {
+      return { success: false, message: "Invalid secret" };
+    }
+    return { success: false, message: "An error has occured, try again later" };
+  } catch (error) {
+    console.log(error);
+    return { success: false, message: "An error has occured, try again later" };
+  }
+};
