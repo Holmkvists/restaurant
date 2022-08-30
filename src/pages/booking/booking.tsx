@@ -1,60 +1,52 @@
+import { getAllBookings } from "api/api";
+import { IUserBooking } from "models/IUserBooking";
 import { useState } from "react";
-import { GenericButton } from "../../components/GenericButton/GenericButton";
+import { Route, Routes } from "react-router-dom";
+import { DateAndTime } from "../../components/DateAndTime/DateAndTime";
+import { GuestAmount } from "../../components/GuestAmount/GuestAmount";
+import { SignUpInfo } from "../../components/SignUpInfo/SignUpInfo";
 import "../../pages/booking/styles/booking.css";
 import { Header } from "../header/header";
 
 export const Booking = () => {
-  const [bookings, setBookings] = useState({
-    date: 0,
+  const [booking, setBooking] = useState<IUserBooking>({
+    date: "",
     time: 0,
-    userId: "",
     visitors: 0,
-    tables: 0,
     name: "",
-    phone: 0,
     email: "",
+    phone: "",
   });
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-  };
+  getAllBookings();
 
   return (
-    <div>
-      <div className="hero__container">
-        <div className="hero__filter">
-          <Header />
-          <div className="booking__container">
-            <div className="booking__square">
-              <h1 className="booking__heading">Boka bord!</h1>
-              <form action="" className="booking__form">
-                <div className="form__container">
-                  <div className="booking__input">
-                    <label htmlFor="">1. Välj datum</label>
-                    <input type="date" name="" id="" />
-                  </div>
-                  <div className="booking__input">
-                    <label htmlFor="">2. Välj en tid</label>
-                    <div className="booking__radiolabel">
-                      <div>
-                        <input type="radio" name="" id="" />
-                        <label htmlFor="">18:00</label>
-                      </div>
-                      <div>
-                        <input type="radio" name="" id="" />
-                        <label htmlFor="">21:00</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="submit__div">
-                  <h4>Välj tid och datum för att se tillgänglighet</h4>
-                  <GenericButton size="m" handleClick={handleClick}>
-                    Nästa
-                  </GenericButton>
-                </div>
-              </form>
-            </div>
+    <div className="hero-container">
+      <div className="hero-filter">
+        <Header />
+        <div className="booking-content">
+          <div className="form-container">
+            <h1>Boka bord!</h1>
+            <Routes>
+              <Route
+                index
+                element={
+                  <DateAndTime setBooking={setBooking} booking={booking} />
+                }
+              />
+              <Route
+                path="/test2"
+                element={
+                  <GuestAmount setBooking={setBooking} booking={booking} />
+                }
+              />
+              <Route
+                path="/test2/test3"
+                element={
+                  <SignUpInfo setBooking={setBooking} booking={booking} />
+                }
+              />
+            </Routes>
           </div>
         </div>
       </div>

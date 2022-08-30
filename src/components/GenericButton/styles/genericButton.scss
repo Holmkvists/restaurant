@@ -1,5 +1,10 @@
 @import "../../../variables/_variables";
 
+.test {
+  display: flex;
+  align-items: center;
+}
+
 .generic__btn {
   padding: 3px;
   cursor: pointer;

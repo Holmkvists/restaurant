@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+.test {
+  display: flex;
+  align-items: center;
+}
+
 .generic__btn {
   padding: 3px;
   cursor: pointer;
@@ -14,4 +19,4 @@
   color: #fff6f9;
   transform: scale(1.03);
   transition: 0.2s ease;
-}/*# sourceMappingURL=genericButton.css.map */
+} /*# sourceMappingURL=genericButton.css.map */

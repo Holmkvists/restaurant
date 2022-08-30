@@ -3,6 +3,7 @@ import "./styles/genericButton.css";
 interface IGenericProps {
   children: string;
   size: "s" | "m" | "l";
+  fontSize: "s" | "m" | "l";
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -13,7 +14,7 @@ export const GenericButton = (props: IGenericProps) => {
   };
 
   return (
-    <div>
+    <div className="test">
       <button
         className="generic__btn"
         onClick={props.handleClick}
