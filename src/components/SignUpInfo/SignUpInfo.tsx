@@ -33,6 +33,7 @@ export const SignUpInfo = (props: ISignUpInfo) => {
 
   return (
     <div>
+      <p>Fyll i kontaktuppgifter</p>
       <div className="user-input__container">
         <label htmlFor="">Förnamn</label>
         <input

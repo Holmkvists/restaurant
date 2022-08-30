@@ -31,6 +31,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
   return (
     <div className="datetime-container">
       <div className="booking__input">
+        <p>Välj tid och datum för att se tillgänglighet</p>
         <label htmlFor="">1. Välj datum</label>
         <input onChange={handleChange} type="date" name="date" id="" />
       </div>

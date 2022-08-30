@@ -16,6 +16,7 @@ export const GuestAmount = (props: IGuestAmount) => {
   };
   return (
     <div>
+      <p>Välj antal personer</p>
       <input onChange={handleChange} type="number" name="visitors" id="" />
       <Link to="/book">Tillbaka</Link>
       <Link to="/book/test2/test3">Nästa</Link>
