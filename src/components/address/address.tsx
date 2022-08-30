@@ -1,4 +1,4 @@
-import "../address/styles/address.css";
+import "./styles/address.css";
 
 export const Address = () => {
   return (
