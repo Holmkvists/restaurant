@@ -4,7 +4,7 @@ interface IGenericProps {
   children: string;
   size: "s" | "m" | "l";
   fontSize: "s" | "m" | "l";
-  handleNextClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const GenericButton = (props: IGenericProps) => {
@@ -17,7 +17,7 @@ export const GenericButton = (props: IGenericProps) => {
     <div className="test">
       <button
         className="generic__btn"
-        onClick={props.handleNextClick}
+        onClick={props.handleClick}
         style={styleObject}
       >
         {props.children}
