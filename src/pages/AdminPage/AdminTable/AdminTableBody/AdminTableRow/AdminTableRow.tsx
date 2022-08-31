@@ -70,12 +70,12 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
         {tables}
       </td>
       <td>
-        <GenericButton fontSize="s" size="s" handleClick={(e) => handleEdit()}>
+        <GenericButton size="s" handleClick={(e) => handleEdit()}>
           Edit
         </GenericButton>
       </td>
       <td>
-        <GenericButton fontSize="s" size="s" handleClick={() => handleSave()}>
+        <GenericButton size="s" handleClick={() => handleSave()}>
           Save
         </GenericButton>
       </td>
