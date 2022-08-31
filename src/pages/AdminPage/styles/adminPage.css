@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 body {
   background-color: #fff6f9;
+}
+body .admin__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }/*# sourceMappingURL=adminPage.css.map */

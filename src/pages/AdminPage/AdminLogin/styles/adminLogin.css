@@ -1,0 +1,14 @@
+.admin__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.admin__login .generic__btn__div {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+.admin__login p {
+  text-align: center;
+  color: red;
+}/*# sourceMappingURL=adminLogin.css.map */
