@@ -1,4 +1,5 @@
 import { IBooking } from "models/IBooking";
+import { IUserBooking } from "models/IUserBooking";
 
 /**
  * The base URL to the API.
@@ -20,6 +21,42 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   }
 };
 
+export const getAvailableBookings = async (
+  date: string,
+  time: string,
+  visitors: string
+) => {
+  try {
+    const response = await fetch(
+      `${API_URL}/bookings/getAvailableBookings/` +
+        `?date=${date}` +
+        `&time=${time}` +
+        `&visitors=${visitors}`
+    );
+    const body = await response.json();
+    return body.data;
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+};
+
+export const postBooking = async (booking: IUserBooking) => {
+  try {
+    const response = await fetch(`${API_URL}/bookings/createBooking`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    });
+    return response.status == 200 ? true : false;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
 /**
  * Updates a booking by sending a patch request
  * @param booking IBooking
@@ -38,5 +75,32 @@ export const patchBooking = async (booking: IBooking) => {
   } catch (error) {
     console.log(error);
     return false;
+  }
+};
+
+/**
+ * Attempt to authorize as an admin towards the API
+ * @param secret The secret given by a user
+ * @returns Object with success status and a message
+ */
+export const authorizeAdmin = async (secret: string) => {
+  try {
+    const response = await fetch(`${API_URL}/authorize`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ secret }),
+    });
+    if (response.status === 200) {
+      return { success: true, message: "" };
+    }
+    if (response.status === 401) {
+      return { success: false, message: "Invalid secret" };
+    }
+    return { success: false, message: "An error has occured, try again later" };
+  } catch (error) {
+    console.log(error);
+    return { success: false, message: "An error has occured, try again later" };
   }
 };
