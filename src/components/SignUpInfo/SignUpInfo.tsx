@@ -1,5 +1,6 @@
 import { postBooking } from "api/api";
 import { IUserBooking } from "models/IUserBooking";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/signupinfo.css";
 
@@ -9,6 +10,8 @@ interface ISignUpInfo {
 }
 
 export const SignUpInfo = (props: ISignUpInfo) => {
+  const [isDisabled, setIsDisabled] = useState(true);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newBooking = { ...props.booking };
     if (e.target.name == "name") {
@@ -26,6 +29,12 @@ export const SignUpInfo = (props: ISignUpInfo) => {
     props.setBooking(newBooking);
     console.log(newBooking);
   };
+
+  useEffect(() => {
+    if (props.booking.name && props.booking.email && props.booking.phone) {
+      setIsDisabled(false);
+    }
+  }, [props.booking]);
 
   const handleSubmit = async () => {
     await postBooking(props.booking);
@@ -60,10 +69,10 @@ export const SignUpInfo = (props: ISignUpInfo) => {
           className="user-input"
           name="email"
         />
-        <Link to="/book/test2">Tillbaka</Link>
-        <button type="submit" onClick={handleSubmit}>
-          Slutför bokning
-        </button>
+        <Link to="/book">Tillbaka</Link>
+        <form action="/booked">
+          <input type="submit" value="Slutför bokning" disabled={isDisabled} />
+        </form>
       </div>
     </div>
   );

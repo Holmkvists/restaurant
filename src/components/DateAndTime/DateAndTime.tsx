@@ -3,6 +3,7 @@ import { GenericButton } from "components/GenericButton/GenericButton";
 import { IUserBooking } from "models/IUserBooking";
 import { Booking } from "pages/booking/booking";
 import React, { useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/dateandtime.css";
 
@@ -12,6 +13,9 @@ interface IDateAndTimeProps {
 }
 
 export const DateAndTime = (props: IDateAndTimeProps) => {
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [isAttempted, setIsAttempted] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newBooking = { ...props.booking };
     if (e.target.name == "date") {
@@ -31,13 +35,27 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
     console.log(newBooking);
   };
 
-  const checkAvailability = () => {
-    getAvailableBookings(
-      props.booking.date,
-      props.booking.time.toString(),
-      props.booking.visitors.toString()
-    );
-  };
+  useEffect(() => {
+    const checkBookings = async () => {
+      if (props.booking.visitors && props.booking.time && props.booking.date) {
+        const isAvailable = await getAvailableBookings(
+          props.booking.date,
+          props.booking.time.toString(),
+          props.booking.visitors.toString()
+        );
+
+        setIsAttempted(true);
+
+        if (isAvailable) {
+          setIsDisabled(false);
+          return;
+        }
+
+        setIsDisabled(true);
+      }
+    };
+    checkBookings();
+  }, [props.booking]);
 
   return (
     <div className="datetime-container">
@@ -78,9 +96,10 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               id=""
             />
           </div>
-          <Link onClick={checkAvailability} to="/book/test2/test3">
-            Nästa
-          </Link>
+          <form action="/book/test2/test3">
+            <input type="submit" value="Nästa" disabled={isDisabled} />
+          </form>
+          {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
         </div>
       </div>
     </div>
