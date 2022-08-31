@@ -3,7 +3,6 @@ import { IUserBooking } from "models/IUserBooking";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { DateAndTime } from "../../components/DateAndTime/DateAndTime";
-import { GuestAmount } from "../../components/GuestAmount/GuestAmount";
 import { SignUpInfo } from "../../components/SignUpInfo/SignUpInfo";
 import "../../pages/booking/styles/booking.css";
 import { Header } from "../header/header";
@@ -32,12 +31,6 @@ export const Booking = () => {
                 index
                 element={
                   <DateAndTime setBooking={setBooking} booking={booking} />
-                }
-              />
-              <Route
-                path="/test2"
-                element={
-                  <GuestAmount setBooking={setBooking} booking={booking} />
                 }
               />
               <Route

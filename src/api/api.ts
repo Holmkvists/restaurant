@@ -21,14 +21,23 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   }
 };
 
-export const getAvailableBookings = async (): Promise<IUserBooking[]> => {
+export const getAvailableBookings = async (
+  date: string,
+  time: string,
+  visitors: string
+) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/getAvailableBookings`);
+    const response = await fetch(
+      `${API_URL}/bookings/getAvailableBookings/` +
+        `?date=${date}` +
+        `&time=${time}` +
+        `&visitors=${visitors}`
+    );
     const body = await response.json();
     return body.data;
   } catch (error) {
     console.log(error);
-    return [];
+    return;
   }
 };
 

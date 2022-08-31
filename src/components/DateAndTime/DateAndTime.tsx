@@ -22,11 +22,24 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
       newBooking.time = +e.target.value;
     }
 
+    if (e.target.name == "visitors") {
+      newBooking.visitors = +e.target.value;
+    }
+
     props.setBooking(newBooking);
+
     console.log(newBooking);
   };
 
-  const checkAvailability = () => {};
+  const checkAvailability = () => {
+    getAvailableBookings(
+      props.booking.date,
+      props.booking.time.toString(),
+      props.booking.visitors.toString()
+    );
+  };
+
+  console.log(checkAvailability);
 
   return (
     <div className="datetime-container">
@@ -58,7 +71,16 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
             />
             <label htmlFor="">21:00</label>
           </div>
-          <Link onClick={checkAvailability} to="/book/test2">
+          <div>
+            <p>Välj antal personer</p>
+            <input
+              onChange={handleChange}
+              type="number"
+              name="visitors"
+              id=""
+            />
+          </div>
+          <Link onClick={checkAvailability} to="/book/test2/test3">
             Nästa
           </Link>
         </div>
