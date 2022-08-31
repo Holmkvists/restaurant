@@ -13,9 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/book//*" element={<Booking />}></Route>
+        <Route path="/book" element={<Booking />}></Route>
+        <Route path="/adminPage" element={<AdminPage />}></Route>
         <Route path="/cancel" element={<CancelledPage />} />
-        <Route path="adminPage" element={<AdminPage />}></Route>
+        <Route path="/adminPage" element={<AdminPage />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
