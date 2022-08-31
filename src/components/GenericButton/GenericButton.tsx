@@ -3,6 +3,7 @@ import "./styles/genericButton.css";
 interface IGenericProps {
   children: string;
   size: "s" | "m" | "l";
+  fontSize: "s" | "m" | "l";
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

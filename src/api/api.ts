@@ -1,4 +1,5 @@
 import { IBooking } from "models/IBooking";
+import { IUserBooking } from "models/IUserBooking";
 
 /**
  * The base URL to the API.
@@ -17,6 +18,42 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   } catch (error) {
     console.log(error);
     return [];
+  }
+};
+
+export const getAvailableBookings = async (
+  date: string,
+  time: string,
+  visitors: string
+) => {
+  try {
+    const response = await fetch(
+      `${API_URL}/bookings/getAvailableBookings/` +
+        `?date=${date}` +
+        `&time=${time}` +
+        `&visitors=${visitors}`
+    );
+    const body = await response.json();
+    return body.data;
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+};
+
+export const postBooking = async (booking: IUserBooking) => {
+  try {
+    const response = await fetch(`${API_URL}/bookings/createBooking`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    });
+    return response.status == 200 ? true : false;
+  } catch (error) {
+    console.log(error);
+    return false;
   }
 };
 
