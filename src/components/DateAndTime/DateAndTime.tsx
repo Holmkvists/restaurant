@@ -39,8 +39,6 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
     );
   };
 
-  console.log(checkAvailability);
-
   return (
     <div className="datetime-container">
       <div className="booking__input">
