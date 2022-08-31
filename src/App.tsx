@@ -6,6 +6,7 @@ import { NotFound } from "./pages/notfound/notfound";
 import { Booking } from "./pages/booking/booking";
 import { CancelledPage } from "./pages/CancelledPage/CancelledPage";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
+import { Menu } from "pages/Menu/Menu";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/menu" element={<Menu />}></Route>
         <Route path="/book//*" element={<Booking />}></Route>
         <Route path="/cancel" element={<CancelledPage />} />
         <Route path="adminPage" element={<AdminPage />}></Route>

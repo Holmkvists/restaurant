@@ -1,0 +1,15 @@
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-hero {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../../../public/assets/Menu.svg");
+  height: 160vh;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
