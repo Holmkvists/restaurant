@@ -12,7 +12,9 @@ export const AdminLogin = (props: IAdminLoginProps) => {
     setSecret(e.currentTarget.value);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
     const authResponse = await authorizeAdmin(secret);
 
     if (!authResponse.success) {
@@ -24,14 +26,20 @@ export const AdminLogin = (props: IAdminLoginProps) => {
   };
 
   return (
-    <div className="admin__login">
-      <label htmlFor="adminInput">Admin Secret:</label>
-      <input id="adminInput" type="password" onChange={(e) => handleEdit(e)} />
-      <GenericButton size="m" handleClick={handleSubmit}>
-        Submit
-      </GenericButton>
-      {error && <p>{error}</p>}
-    </div>
+    <>
+      <form className="admin__login">
+        <label htmlFor="admin__secret">Admin Secret:</label>
+        <input
+          id="admin__secret"
+          type="password"
+          onChange={(e) => handleEdit(e)}
+        />
+        <GenericButton size="m" handleClick={handleSubmit}>
+          Submit
+        </GenericButton>
+        {error && <p>{error}</p>}
+      </form>
+    </>
   );
 };
 
