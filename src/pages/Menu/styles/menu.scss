@@ -1,15 +1,21 @@
+.menu-full {
+  // background-color: black;
+}
+
 .menu-container {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  width: auto;
+  // background-color: black;
 }
 
 .menu-hero {
   display: flex;
   justify-content: center;
-  background-image: url("../../../../public/assets/Menu.svg");
-  height: 160vh;
-  width: 50%;
+  background-image: url("../../../../public/assets/test2.svg");
+  height: 80%;
+  width: 40%;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
 }
