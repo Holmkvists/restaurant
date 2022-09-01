@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { DateAndTime } from "../../components/DateAndTime/DateAndTime";
 import { SignUpInfo } from "../../components/SignUpInfo/SignUpInfo";
 import "../../pages/booking/styles/booking.css";
-import { Header } from "../header/header";
+import { Header } from "../../components/Header/Header";
 
 export const Booking = () => {
   const [booking, setBooking] = useState<IUserBooking>({
