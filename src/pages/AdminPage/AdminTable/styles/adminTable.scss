@@ -7,8 +7,15 @@ table {
   display: block;
   overflow-x: auto;
   max-width: 90%;
+  font-size: 10pt;
   th,
   td {
     border: 1px solid $darker-pink;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  table {
+    font-size: 12pt;
   }
 }

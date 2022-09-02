@@ -6,8 +6,15 @@ table {
   display: block;
   overflow-x: auto;
   max-width: 90%;
+  font-size: 10pt;
 }
 table th,
 table td {
   border: 1px solid rgba(216, 112, 147, 0.951);
+}
+
+@media only screen and (min-width: 900px) {
+  table {
+    font-size: 12pt;
+  }
 }/*# sourceMappingURL=adminTable.css.map */
