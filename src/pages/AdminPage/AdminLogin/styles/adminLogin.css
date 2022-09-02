@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.admin__login label {
+  font-weight: bold;
+}
 .admin__login .generic__btn__div {
   display: flex;
   justify-content: center;
