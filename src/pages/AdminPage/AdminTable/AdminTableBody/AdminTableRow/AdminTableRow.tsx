@@ -31,7 +31,8 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       tables,
     };
     await patchBooking(booking);
-    handleEdit();
+    setIsEditable(false);
+    setStyle({ backgroundColor: "transparent" });
   };
 
   return (
@@ -41,32 +42,28 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setEmail(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setEmail(e.currentTarget.innerText)}>
         {email}
       </td>
       <td
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setDate(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setDate(e.currentTarget.innerText)}>
         {date}
       </td>
       <td
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setTime(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setTime(e.currentTarget.innerText)}>
         {time}
       </td>
       <td
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setTables(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setTables(e.currentTarget.innerText)}>
         {tables}
       </td>
       <td>
