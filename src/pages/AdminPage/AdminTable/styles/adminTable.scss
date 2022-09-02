@@ -5,6 +5,7 @@ table {
   border: 2px solid $darker-pink;
   border-collapse: collapse;
   display: block;
+  overflow-x: auto;
   th,
   td {
     border: 1px solid $darker-pink;
