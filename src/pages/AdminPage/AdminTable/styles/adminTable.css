@@ -5,6 +5,7 @@ table {
   border-collapse: collapse;
   display: block;
   overflow-x: auto;
+  max-width: 90%;
 }
 table th,
 table td {

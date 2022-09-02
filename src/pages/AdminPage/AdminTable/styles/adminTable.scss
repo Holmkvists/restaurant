@@ -6,6 +6,7 @@ table {
   border-collapse: collapse;
   display: block;
   overflow-x: auto;
+  max-width: 90%;
   th,
   td {
     border: 1px solid $darker-pink;
