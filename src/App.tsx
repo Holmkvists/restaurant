@@ -15,7 +15,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/book" element={<Booking />}></Route>
         <Route path="/adminPage" element={<AdminPage />}></Route>
-        <Route path="/cancel" element={<CancelledPage />} />
+        <Route path="/cancel/:id" element={<CancelledPage />} />
         <Route path="/adminPage" element={<AdminPage />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
