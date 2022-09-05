@@ -79,6 +79,24 @@ export const patchBooking = async (booking: IBooking) => {
 };
 
 /**
+ * Deletes the booking from the database.
+ * @param bookingId ID of the booking
+ */
+export const cancelBooking = async (bookingId: string) => {
+  try {
+    const response = await fetch(`${API_URL}/bookings/cancelBooking`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ _id: bookingId }),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+/**
  * Attempt to authorize as an admin towards the API
  * @param secret The secret given by a user
  * @returns Object with success status and a message
