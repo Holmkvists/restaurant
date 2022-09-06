@@ -1,6 +1,5 @@
 import { Address } from "components/Address0/Address";
 import { Header } from "components/Header/Header";
-import { NotFound } from "pages/NotFound/NotFound";
 import { Link, useParams } from "react-router-dom";
 import "./styles/confirmationPage.css";
 import { useEffect } from "react";
