@@ -1,6 +1,5 @@
+import { Header } from "components/Header/Header";
 import "./styles/menu.css";
-
-import { Header } from "pages/header/header";
 
 export const Menu = () => {
   return (
