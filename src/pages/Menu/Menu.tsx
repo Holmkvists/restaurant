@@ -4,10 +4,10 @@ import { Header } from "pages/header/header";
 
 export const Menu = () => {
   return (
-    <div className="menu-full">
+    <div className="menu__full">
       <Header />
-      <div className="menu-container">
-        <div className="menu-hero"></div>
+      <div className="menu__container">
+        <div className="menu__hero"></div>
       </div>
     </div>
   );

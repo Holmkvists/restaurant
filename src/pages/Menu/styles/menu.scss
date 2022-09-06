@@ -1,11 +1,10 @@
-.menu-container {
+.menu__container {
   display: flex;
   justify-content: center;
   height: 100vh;
-  width: auto;
 }
 
-.menu-hero {
+.menu__hero {
   display: flex;
   justify-content: center;
   background-image: url("../../../../public/assets/test2.svg");
