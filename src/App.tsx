@@ -5,6 +5,7 @@ import { Contact } from "./pages/Contact/Contact";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { Booking } from "./pages/Booking/Booking";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
+import { Menu } from "pages/Menu/Menu";
 import { ConfirmationPage } from "components/ConfirmationPage/ConfirmationPage";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/menu" element={<Menu />}></Route>
         <Route path="/kontakt" element={<Contact />}></Route>
         <Route path="/boka-bord//*" element={<Booking />}></Route>
         <Route
@@ -22,7 +24,7 @@ function App() {
           path="/avbokningsbekraftelse/:id"
           element={<ConfirmationPage type="avbokningsbekraftelse" />}
         />
-        <Route path="adminPage" element={<AdminPage />}></Route>
+        <Route path="/adminPage" element={<AdminPage />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
