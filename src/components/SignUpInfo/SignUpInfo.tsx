@@ -41,39 +41,56 @@ export const SignUpInfo = (props: ISignUpInfo) => {
   };
 
   return (
-    <div>
-      <p>Fyll i kontaktuppgifter</p>
-      <div className="user-input__container">
-        <label htmlFor="">Förnamn</label>
-        <input
-          onChange={handleChange}
-          type="text"
-          className="user-input"
-          name="name"
-        />
-      </div>
-      <div className="user-input__container">
-        <label htmlFor="">Telefonnummer</label>
-        <input
-          onChange={handleChange}
-          type="text"
-          className="user-input"
-          name="phone"
-        />
-      </div>
-      <div className="user-input__container">
-        <label htmlFor="">Epostadress</label>
-        <input
-          onChange={handleChange}
-          type="text"
-          className="user-input"
-          name="email"
-        />
-        <Link to="/book">Tillbaka</Link>
-        <form action="/booked">
-          <input type="submit" value="Slutför bokning" disabled={isDisabled} />
-        </form>
-      </div>
+    <div className="signup__container">
+      <Link to="/boka-bord" className="back__btn">
+        <p>
+          <i className="gg-arrow-left"></i>
+        </p>
+      </Link>
+      <header className="signup__header">
+        <h1 className="heading__h1">Boka bord!</h1>
+        <p>Fyll i kontaktuppgifter</p>
+      </header>
+
+      <main className="signup__main">
+        <div className="user-input__container">
+          <label htmlFor="">Förnamn</label>
+          <input
+            onChange={handleChange}
+            type="text"
+            className="user-input"
+            name="name"
+          />
+        </div>
+        <div className="user-input__container">
+          <label htmlFor="">Telefonnummer</label>
+          <input
+            onChange={handleChange}
+            type="text"
+            className="user-input"
+            name="phone"
+          />
+        </div>
+        <div className="user-input__container">
+          <label htmlFor="">Epostadress</label>
+          <input
+            onChange={handleChange}
+            type="text"
+            className="user-input"
+            name="email"
+          />
+        </div>
+        <div className="btn__div">
+          <form action="/bokningsbekraftelse">
+            <input
+              type="submit"
+              value="Slutför bokning"
+              className="complete__btn"
+              disabled={isDisabled}
+            />
+          </form>
+        </div>
+      </main>
     </div>
   );
 };

@@ -1,10 +1,7 @@
 import { getAvailableBookings } from "api/api";
-import { GenericButton } from "components/GenericButton/GenericButton";
 import { IUserBooking } from "models/IUserBooking";
-import { Booking } from "pages/booking/booking";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "./styles/dateandtime.css";
 
 interface IDateAndTimeProps {
@@ -58,49 +55,69 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
   }, [props.booking]);
 
   return (
-    <div className="datetime-container">
-      <div className="booking__input">
+    <div className="datetime__container">
+      <div>
+        <h1 className="heading__h1">Boka bord!</h1>
         <p>Välj tid och datum för att se tillgänglighet</p>
-        <label htmlFor="">1. Välj datum</label>
-        <input onChange={handleChange} type="date" name="date" id="" />
       </div>
-      <div className="booking__input">
-        <label htmlFor="">2. Välj en tid</label>
-        <div className="booking__radiolabel">
-          <div>
+      <div className="date-time__div">
+        <div className="booking__input">
+          <div className="date__input-label">
+            <label htmlFor="">Välj datum</label>
             <input
               onChange={handleChange}
-              type="radio"
-              name="time"
+              type="date"
+              name="date"
               id=""
-              value="18"
+              className="date__input"
             />
-            <label htmlFor="">18:00</label>
           </div>
-          <div>
-            <input
-              onChange={handleChange}
-              type="radio"
-              name="time"
-              id=""
-              value="21"
-            />
-            <label htmlFor="">21:00</label>
-          </div>
-          <div>
+          <div className="amount__div">
             <p>Välj antal personer</p>
             <input
               onChange={handleChange}
               type="number"
               name="visitors"
-              id=""
+              className="amount__input"
             />
           </div>
-          <form action="/book/test2/test3">
-            <input type="submit" value="Nästa" disabled={isDisabled} />
-          </form>
-          {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
         </div>
+        <div className="booking__input2">
+          <label htmlFor="">Välj en tid</label>
+          <div className="booking__radiolabel">
+            <div>
+              <input
+                onChange={handleChange}
+                type="radio"
+                name="time"
+                id=""
+                value="18"
+              />
+              <label htmlFor="">18:00</label>
+            </div>
+            <div>
+              <input
+                onChange={handleChange}
+                type="radio"
+                name="time"
+                id=""
+                value="21"
+              />
+              <label htmlFor="">21:00</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="form__div">
+        <form action="/boka-bord/personuppgifter" className="next__btn-form">
+          <input
+            type="submit"
+            value="Nästa"
+            disabled={isDisabled}
+            className="next__btn"
+          />
+        </form>
+        {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
       </div>
     </div>
   );

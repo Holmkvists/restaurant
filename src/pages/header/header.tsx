@@ -15,13 +15,13 @@ export const Header = () => {
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">
-          <Link className="animation" to={"/book"}>
+          <Link className="animation" to={"/boka-bord"}>
             Boka bord
           </Link>
         </li>
         <span className="header__span__short"></span>
         <li className="header__li">
-          <Link className="animation" to={"/contact"}>
+          <Link className="animation" to={"/kontakt"}>
             Kontakt
           </Link>
         </li>
