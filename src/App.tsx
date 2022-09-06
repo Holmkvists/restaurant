@@ -13,9 +13,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/menu" element={<Menu />}></Route>
-        <Route path="/kontakt" element={<Contact />}></Route>
-        <Route path="/boka-bord//*" element={<Booking />}></Route>
+        <Route path="/meny" element={<Menu />} />
+        <Route path="/kontakt" element={<Contact />} />
+        <Route path="/boka-bord" element={<Booking />} />
         <Route
           path="/bokningsbekraftelse"
           element={<ConfirmationPage type="bokningsbekraftelse" />}
@@ -24,8 +24,8 @@ function App() {
           path="/avbokningsbekraftelse/:id"
           element={<ConfirmationPage type="avbokningsbekraftelse" />}
         />
-        <Route path="/adminPage" element={<AdminPage />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        <Route path="/adminPage" element={<AdminPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

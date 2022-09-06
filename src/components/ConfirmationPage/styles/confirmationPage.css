@@ -1,14 +1,14 @@
-@import url(../../../variables/_variables.scss);
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 .confirmation {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff6f9;
-  height: 100vh;
+  min-height: calc(100% - 50px);
 }
 .confirmation .confirmation__message {
-  position: absolute;
-  top: 35%;
+  position: static;
+  margin-top: 225px;
   display: flex;
   flex-direction: column;
   align-items: center;

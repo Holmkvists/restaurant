@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 .address-container {
-  position: absolute;
-  bottom: 5%;
+  position: static;
+  margin-bottom: 25px;
+  text-align: center;
   font-size: 16pt;
+  overflow: hidden;
+  background-color: #fff6f9;
 }
 
 @media only screen and (min-width: 900px) {

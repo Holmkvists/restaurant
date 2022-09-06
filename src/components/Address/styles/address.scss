@@ -1,7 +1,16 @@
+// IMPORTS
+
+@import "../../../variables/variables.scss";
+
+// ADDRESS STYLING
+
 .address-container {
-  position: absolute;
-  bottom: 5%;
+  position: static;
+  margin-bottom: 25px;
+  text-align: center;
   font-size: 16pt;
+  overflow: hidden;
+  background-color: $light-pink;
 }
 
 @media only screen and (min-width: 900px) {

@@ -1,6 +1,6 @@
 // IMPORTS
 
-@import url(../../../variables/_variables.scss);
+@import "../../../variables/variables";
 
 // CANCELLATION PAGE STYLING
 
@@ -8,14 +8,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // Godkänner inte variabel
   background-color: $light-pink;
-  // background-color: #fff6f9;
-  height: 100vh;
+  min-height: calc(100% - 50px);
 
   .confirmation__message {
-    position: absolute;
-    top: 35%;
+    position: static;
+    margin-top: 225px;
+    // position: absolute;
+    // top: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
