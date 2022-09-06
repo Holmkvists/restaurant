@@ -16,9 +16,9 @@ export const HomePage = () => {
         <div className="lines"></div>
         <Link to={"/menu"}>Meny</Link>
         <div className="lg__screen__lines"></div>
-        <Link to={"/book"}>Boka bord</Link>
+        <Link to={"/boka-bord"}>Boka bord</Link>
         <div className="lg__screen__lines"></div>
-        <Link to={"/contact"}>Kontakt</Link>
+        <Link to={"/kontakt"}>Kontakt</Link>
         <div className="lines"></div>
       </nav>
       <Address />

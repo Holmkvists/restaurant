@@ -1,8 +1,20 @@
+@import "../../../variables/variables.css";
+.signup__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .user-input__container {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 40px;
+  height: 45px;
+}
+
+.heading__h1 {
+  display: flex;
+  justify-content: center;
 }
 
 .user-input {
@@ -14,4 +26,111 @@
 
 .user-input:focus {
   outline: none;
+}
+
+.user-input {
+  height: 100px;
+}
+
+.btn__div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.complete__btn:enabled {
+  padding: 3px;
+  width: 160px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.complete__btn:enabled:hover {
+  transform: scale(1.03);
+  transition: ease-in-out 0.2s;
+}
+
+.complete__btn:disabled {
+  padding: 3px;
+  width: 160px;
+  font-size: 20px;
+}
+
+.signup__container {
+  row-gap: 10px;
+}
+
+.signup__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.back__btn {
+  position: relative;
+  right: 70px;
+}
+
+.gg-arrow-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  color: black;
+}
+.gg-arrow-left:hover {
+  transform: scale(1.2);
+  transition: ease 0.4s;
+}
+
+.gg-arrow-left::after,
+.gg-arrow-left::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3px;
+}
+
+.gg-arrow-left::after {
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+}
+
+.gg-arrow-left::before {
+  width: 16px;
+  height: 2px;
+  bottom: 10px;
+  background: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .back__btn {
+    position: relative;
+    right: 0px;
+  }
+  .booking__input2 {
+    width: 149px;
+  }
 }/*# sourceMappingURL=signupinfo.css.map */

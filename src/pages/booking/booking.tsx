@@ -20,12 +20,11 @@ export const Booking = () => {
   getAllBookings();
 
   return (
-    <div className="hero-container">
-      <div className="hero-filter">
+    <div className="hero__container">
+      <div className="hero__filter">
         <Header />
-        <div className="booking-content">
-          <div className="form-container">
-            <h1>Boka bord!</h1>
+        <div className="booking__content">
+          <div className="form__container">
             <Routes>
               <Route
                 index
@@ -34,7 +33,7 @@ export const Booking = () => {
                 }
               />
               <Route
-                path="/test2/test3"
+                path="/personuppgifter"
                 element={
                   <SignUpInfo setBooking={setBooking} booking={booking} />
                 }

@@ -25,7 +25,7 @@ export const getAvailableBookings = async (
   date: string,
   time: string,
   visitors: string
-) => {
+): Promise<boolean> => {
   try {
     const response = await fetch(
       `${API_URL}/bookings/getAvailableBookings/` +
@@ -33,11 +33,14 @@ export const getAvailableBookings = async (
         `&time=${time}` +
         `&visitors=${visitors}`
     );
+
     const body = await response.json();
-    return body.data;
+    console.log(body.data);
+
+    return body.data[0];
   } catch (error) {
     console.log(error);
-    return;
+    return false;
   }
 };
 
