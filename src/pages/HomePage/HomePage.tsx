@@ -1,6 +1,6 @@
 import "./styles/homePage.css";
 import { Link } from "react-router-dom";
-import { Address } from "components/Address0/Address";
+import { Address } from "components/Address0/Address0";
 
 export const HomePage = () => {
   return (
