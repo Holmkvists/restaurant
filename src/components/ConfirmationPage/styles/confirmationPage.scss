@@ -1,0 +1,51 @@
+// IMPORTS
+
+@import url(../../../variables/_variables.scss);
+
+// CANCELLATION PAGE STYLING
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // Godkänner inte variabel
+  background-color: $light-pink;
+  // background-color: #fff6f9;
+  height: 100vh;
+
+  .confirmation__message {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      height: 70px;
+      width: 70px;
+    }
+
+    p,
+    a {
+      margin-top: 40px;
+      width: 60%;
+      text-align: center;
+      font-size: 20pt;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .confirmation__message {
+    img {
+      height: 85px;
+      width: 85px;
+    }
+
+    p,
+    a {
+      width: 100%;
+      font-size: 22pt;
+    }
+  }
+}

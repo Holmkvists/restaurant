@@ -1,7 +1,6 @@
-tr {
-  border: 1px solid black;
-}
-tr td, tr th {
-  border: 1px solid black;
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+tr td,
+tr th {
+  border: 1px solid rgba(216, 112, 147, 0.951);
   padding: 5px;
 }/*# sourceMappingURL=adminTableRow.css.map */

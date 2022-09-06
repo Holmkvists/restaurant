@@ -1,7 +1,21 @@
 @use "../../../../variables/_variables" as *;
 
 table {
-    background-color: $light-pink;
-    border: 1px solid black;
-    border-collapse: collapse;
+  background-color: white;
+  border: 2px solid $darker-pink;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  max-width: 90%;
+  font-size: 10pt;
+  th,
+  td {
+    border: 1px solid $darker-pink;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  table {
+    font-size: 12pt;
+  }
 }

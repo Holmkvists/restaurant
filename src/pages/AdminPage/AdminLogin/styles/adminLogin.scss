@@ -1,0 +1,17 @@
+.admin__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  label {
+    font-weight: bold;
+  }
+  .generic__btn__div {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+  }
+  p {
+    text-align: center;
+    color: red;
+  }
+}
