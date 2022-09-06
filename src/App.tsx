@@ -1,9 +1,9 @@
 import "./main/styles/main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "pages/HomePage/HomePage";
-import { Contact } from "./pages/Contact0/Contact0";
-import { NotFound } from "./pages/NotFound0/NotFound";
-import { Booking } from "./pages/Booking0/Booking";
+import { Contact } from "./pages/Contact/Contact";
+import { NotFound } from "./pages/NotFound/NotFound";
+import { Booking } from "./pages/Booking/Booking";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { Menu } from "pages/Menu/Menu";
 import { ConfirmationPage } from "components/ConfirmationPage/ConfirmationPage";
