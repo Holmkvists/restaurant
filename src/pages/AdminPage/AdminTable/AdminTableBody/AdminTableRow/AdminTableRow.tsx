@@ -6,10 +6,10 @@ import "./styles/adminTableRow.css";
 
 export const AdminTableRow = (props: AdminTableRowProps) => {
   const id = props.booking._id;
-  const email = props.booking.email;
 
   const [date, setDate] = useState(props.booking.date);
   const [time, setTime] = useState(props.booking.time);
+  const [email, setEmail] = useState(props.booking.email);
   const [tables, setTables] = useState(props.booking.tables);
 
   const [isEditable, setIsEditable] = useState(false);
@@ -31,43 +31,48 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       tables,
     };
     await patchBooking(booking);
+    setIsEditable(false);
+    setStyle({ backgroundColor: "transparent" });
   };
 
   return (
     <tr>
-      <td>{email}</td>
       <td>{id}</td>
       <td
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setDate(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setEmail(e.currentTarget.innerText)}>
+        {email}
+      </td>
+      <td
+        style={style}
+        suppressContentEditableWarning
+        contentEditable={isEditable}
+        onBlur={(e) => setDate(e.currentTarget.innerText)}>
         {date}
       </td>
       <td
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setTime(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setTime(e.currentTarget.innerText)}>
         {time}
       </td>
       <td
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setTables(e.currentTarget.innerText)}
-      >
+        onBlur={(e) => setTables(e.currentTarget.innerText)}>
         {tables}
       </td>
       <td>
-        <GenericButton fontSize="s" size="s" handleClick={(e) => handleEdit()}>
+        <GenericButton size="s" handleClick={(e) => handleEdit()}>
           Edit
         </GenericButton>
       </td>
       <td>
-        <GenericButton fontSize="s" size="s" handleClick={() => handleSave()}>
+        <GenericButton size="s" handleClick={() => handleSave()}>
           Save
         </GenericButton>
       </td>

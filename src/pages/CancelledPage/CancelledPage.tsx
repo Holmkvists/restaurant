@@ -1,11 +1,19 @@
 //  IMPORTS
 
-import { Header } from "../header/header";
-import { Link } from "react-router-dom";
+import { Header } from "../../components/Header/Header";
+import { Link, useParams } from "react-router-dom";
 import { Address } from "../../components/address/address";
 import "./styles/cancelledPage.css";
+import { useEffect } from "react";
+import { cancelBooking } from "api/api";
 
 export const CancelledPage = () => {
+  const { id } = useParams();
+  useEffect(() => {
+    if (id) {
+      cancelBooking(id);
+    }
+  }, []);
   return (
     <main className="cancellation">
       <Header />

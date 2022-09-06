@@ -1,5 +1,5 @@
+import { Header } from "components/Header/Header";
 import "../contact/styles/contact.css";
-import { Header } from "../header/header";
 export const Contact = () => {
   return (
     <div className="image__container">

@@ -3,10 +3,9 @@ import { IUserBooking } from "models/IUserBooking";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { DateAndTime } from "../../components/DateAndTime/DateAndTime";
-import { GuestAmount } from "../../components/GuestAmount/GuestAmount";
 import { SignUpInfo } from "../../components/SignUpInfo/SignUpInfo";
 import "../../pages/booking/styles/booking.css";
-import { Header } from "../header/header";
+import { Header } from "../../components/Header/Header";
 
 export const Booking = () => {
   const [booking, setBooking] = useState<IUserBooking>({
@@ -21,12 +20,11 @@ export const Booking = () => {
   getAllBookings();
 
   return (
-    <div className="hero-container">
-      <div className="hero-filter">
+    <div className="hero__container">
+      <div className="hero__filter">
         <Header />
-        <div className="booking-content">
-          <div className="form-container">
-            <h1>Boka bord!</h1>
+        <div className="booking__content">
+          <div className="form__container">
             <Routes>
               <Route
                 index
@@ -35,13 +33,7 @@ export const Booking = () => {
                 }
               />
               <Route
-                path="/test2"
-                element={
-                  <GuestAmount setBooking={setBooking} booking={booking} />
-                }
-              />
-              <Route
-                path="/test2/test3"
+                path="/personuppgifter"
                 element={
                   <SignUpInfo setBooking={setBooking} booking={booking} />
                 }

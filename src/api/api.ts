@@ -21,14 +21,26 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   }
 };
 
-export const getAvailableBookings = async (): Promise<IUserBooking[]> => {
+export const getAvailableBookings = async (
+  date: string,
+  time: string,
+  visitors: string
+): Promise<boolean> => {
   try {
-    const response = await fetch(`${API_URL}/bookings/getAvailableBookings`);
+    const response = await fetch(
+      `${API_URL}/bookings/getAvailableBookings/` +
+        `?date=${date}` +
+        `&time=${time}` +
+        `&visitors=${visitors}`
+    );
+
     const body = await response.json();
-    return body.data;
+    console.log(body.data);
+
+    return body.data[0];
   } catch (error) {
     console.log(error);
-    return [];
+    return false;
   }
 };
 
@@ -66,5 +78,50 @@ export const patchBooking = async (booking: IBooking) => {
   } catch (error) {
     console.log(error);
     return false;
+  }
+};
+
+/**
+ * Deletes the booking from the database.
+ * @param bookingId ID of the booking
+ */
+export const cancelBooking = async (bookingId: string) => {
+  try {
+    const response = await fetch(`${API_URL}/bookings/cancelBooking`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ _id: bookingId }),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+/**
+ * Attempt to authorize as an admin towards the API
+ * @param secret The secret given by a user
+ * @returns Object with success status and a message
+ */
+export const authorizeAdmin = async (secret: string) => {
+  try {
+    const response = await fetch(`${API_URL}/authorize`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ secret }),
+    });
+    if (response.status === 200) {
+      return { success: true, message: "" };
+    }
+    if (response.status === 401) {
+      return { success: false, message: "Invalid secret" };
+    }
+    return { success: false, message: "An error has occured, try again later" };
+  } catch (error) {
+    console.log(error);
+    return { success: false, message: "An error has occured, try again later" };
   }
 };

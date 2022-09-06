@@ -1,5 +1,15 @@
 @use "../../../variables/variables" as *;
 
 body {
-    background-color: $light-pink;
+  background-color: $light-pink;
+  .admin__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/public/assets/logo/flamingo-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
 }

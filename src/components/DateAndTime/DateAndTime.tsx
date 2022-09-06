@@ -1,9 +1,7 @@
 import { getAvailableBookings } from "api/api";
-import { GenericButton } from "components/GenericButton/GenericButton";
 import { IUserBooking } from "models/IUserBooking";
-import { Booking } from "pages/booking/booking";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./styles/dateandtime.css";
 
 interface IDateAndTimeProps {
@@ -12,6 +10,9 @@ interface IDateAndTimeProps {
 }
 
 export const DateAndTime = (props: IDateAndTimeProps) => {
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [isAttempted, setIsAttempted] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newBooking = { ...props.booking };
     if (e.target.name == "date") {
@@ -22,46 +23,101 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
       newBooking.time = +e.target.value;
     }
 
+    if (e.target.name == "visitors") {
+      newBooking.visitors = +e.target.value;
+    }
+
     props.setBooking(newBooking);
+
     console.log(newBooking);
   };
 
-  const checkAvailability = () => {};
+  useEffect(() => {
+    const checkBookings = async () => {
+      if (props.booking.visitors && props.booking.time && props.booking.date) {
+        const isAvailable = await getAvailableBookings(
+          props.booking.date,
+          props.booking.time.toString(),
+          props.booking.visitors.toString()
+        );
+
+        setIsAttempted(true);
+
+        if (isAvailable) {
+          setIsDisabled(false);
+          return;
+        }
+
+        setIsDisabled(true);
+      }
+    };
+    checkBookings();
+  }, [props.booking]);
 
   return (
-    <div className="datetime-container">
-      <div className="booking__input">
+    <div className="datetime__container">
+      <div>
+        <h1 className="heading__h1">Boka bord!</h1>
         <p>Välj tid och datum för att se tillgänglighet</p>
-        <label htmlFor="">1. Välj datum</label>
-        <input onChange={handleChange} type="date" name="date" id="" />
       </div>
-      <div className="booking__input">
-        <label htmlFor="">2. Välj en tid</label>
-        <div className="booking__radiolabel">
-          <div>
+      <div className="date-time__div">
+        <div className="booking__input">
+          <div className="date__input-label">
+            <label htmlFor="">Välj datum</label>
             <input
               onChange={handleChange}
-              type="radio"
-              name="time"
+              type="date"
+              name="date"
               id=""
-              value="18"
+              className="date__input"
             />
-            <label htmlFor="">18:00</label>
           </div>
-          <div>
+          <div className="amount__div">
+            <p>Välj antal personer</p>
             <input
               onChange={handleChange}
-              type="radio"
-              name="time"
-              id=""
-              value="21"
+              type="number"
+              name="visitors"
+              className="amount__input"
             />
-            <label htmlFor="">21:00</label>
           </div>
-          <Link onClick={checkAvailability} to="/book/test2">
-            Nästa
-          </Link>
         </div>
+        <div className="booking__input2">
+          <label htmlFor="">Välj en tid</label>
+          <div className="booking__radiolabel">
+            <div>
+              <input
+                onChange={handleChange}
+                type="radio"
+                name="time"
+                id=""
+                value="18"
+              />
+              <label htmlFor="">18:00</label>
+            </div>
+            <div>
+              <input
+                onChange={handleChange}
+                type="radio"
+                name="time"
+                id=""
+                value="21"
+              />
+              <label htmlFor="">21:00</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="form__div">
+        <form action="/boka-bord/personuppgifter" className="next__btn-form">
+          <input
+            type="submit"
+            value="Nästa"
+            disabled={isDisabled}
+            className="next__btn"
+          />
+        </form>
+        {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
       </div>
     </div>
   );
