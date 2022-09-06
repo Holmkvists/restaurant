@@ -1,14 +1,14 @@
-@import "../../../variables/variables.css";
+@import "../../../../variables/variables.scss";
 
 .hero__container {
-  background-image: url("../../../../public/assets/resturant.jpeg");
+  background-image: url("../../../../../public/assets/resturant.jpeg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   .hero__filter {
     height: 100vh;
-    background-color: $black;
+    // background-color: $black;
   }
   .booking__content {
     display: flex;

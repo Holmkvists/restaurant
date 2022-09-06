@@ -6,6 +6,7 @@ import "./styles/dateandtime.css";
 
 interface IDateAndTimeProps {
   setBooking: React.Dispatch<React.SetStateAction<IUserBooking>>;
+  setDateSelected: React.Dispatch<React.SetStateAction<boolean>>;
   booking: IUserBooking;
 }
 
@@ -109,14 +110,13 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
         </div>
       </div>
       <div className="form__div">
-        <form action="/boka-bord/personuppgifter" className="next__btn-form">
-          <input
-            type="submit"
-            value="Nästa"
-            disabled={isDisabled}
-            className="next__btn"
-          />
-        </form>
+        <button
+          onClick={() => props.setDateSelected(true)}
+          disabled={isDisabled}
+          className="next__btn"
+        >
+          Nästa
+        </button>
         {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
       </div>
     </div>

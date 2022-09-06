@@ -1,13 +1,13 @@
 import { getAllBookings } from "api/api";
 import { IUserBooking } from "models/IUserBooking";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import { DateAndTime } from "../../components/DateAndTime/DateAndTime";
-import { SignUpInfo } from "../../components/SignUpInfo/SignUpInfo";
-import "../../pages/booking/styles/booking.css";
+import { DateAndTime } from "./DateAndTime/DateAndTime";
+import { SignUpInfo } from "./SignUpInfo/SignUpInfo";
+import "./styles/booking.css";
 import { Header } from "../../components/Header/Header";
 
 export const Booking = () => {
+  const [dateSelected, setDateSelected] = useState(false);
   const [booking, setBooking] = useState<IUserBooking>({
     date: "",
     time: 0,
@@ -25,20 +25,19 @@ export const Booking = () => {
         <Header />
         <div className="booking__content">
           <div className="form__container">
-            <Routes>
-              <Route
-                index
-                element={
-                  <DateAndTime setBooking={setBooking} booking={booking} />
-                }
+            {dateSelected ? (
+              <SignUpInfo
+                setBooking={setBooking}
+                booking={booking}
+                setDateSelected={setDateSelected}
               />
-              <Route
-                path="/personuppgifter"
-                element={
-                  <SignUpInfo setBooking={setBooking} booking={booking} />
-                }
+            ) : (
+              <DateAndTime
+                setBooking={setBooking}
+                booking={booking}
+                setDateSelected={setDateSelected}
               />
-            </Routes>
+            )}
           </div>
         </div>
       </div>
