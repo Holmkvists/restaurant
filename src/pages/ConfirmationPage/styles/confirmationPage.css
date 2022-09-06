@@ -1,24 +1,24 @@
 @import url(../../../variables/_variables.scss);
-.cancellation {
+.confirmation {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff6f9;
   height: 100vh;
 }
-.cancellation .cancellation__message {
+.confirmation .confirmation__message {
   position: absolute;
   top: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cancellation .cancellation__message img {
+.confirmation .confirmation__message img {
   height: 70px;
   width: 70px;
 }
-.cancellation .cancellation__message p,
-.cancellation .cancellation__message a {
+.confirmation .confirmation__message p,
+.confirmation .confirmation__message a {
   margin-top: 40px;
   width: 60%;
   text-align: center;
@@ -26,13 +26,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .cancellation__message img {
+  .confirmation__message img {
     height: 85px;
     width: 85px;
   }
-  .cancellation__message p,
-.cancellation__message a {
+  .confirmation__message p,
+.confirmation__message a {
     width: 100%;
     font-size: 22pt;
   }
-}/*# sourceMappingURL=cancelledPage.css.map */
+}/*# sourceMappingURL=confirmationPage.css.map */

@@ -1,11 +1,1 @@
-{
-  "version": 3,
-  "sources": [
-    "../../../variables/_variables.scss",
-    "genericButton.scss",
-    "genericButton.css"
-  ],
-  "names": [],
-  "mappings": "AAAQ,6EAAA;ACER;EACE,aAAA;EACA,mBAAA;ACAF;;ADGA;EACE,YAAA;EACA,eAAA;EACA,8BDJM;ECKN,YAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;ACAF;ADCE;EACE,cDZS;ECaT,sBAAA;EACA,qBAAA;ACCJ",
-  "file": "genericButton.css"
-}
+{"version":3,"sources":["../../../variables/_variables.scss","genericButton.scss","genericButton.css"],"names":[],"mappings":"AAAQ,6EAAA;ACER;EACE,aAAA;EACA,mBAAA;ACAF;;ADGA;EACE,YAAA;EACA,eAAA;EACA,8BDFM;ECGN,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;ACAF;ADCE;EACE,cDZS;ECaT,sBAAA;EACA,qBAAA;ACCJ","file":"genericButton.css"}
