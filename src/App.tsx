@@ -6,12 +6,14 @@ import { NotFound } from "./pages/notfound/notfound";
 import { Booking } from "./pages/booking/booking";
 import { CancelledPage } from "./pages/CancelledPage/CancelledPage";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
+import { Menu } from "pages/Menu/Menu";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/menu" element={<Menu />}></Route>
         <Route path="/kontakt" element={<Contact />}></Route>
         <Route path="/boka-bord//*" element={<Booking />}></Route>
         <Route path="/cancel" element={<CancelledPage />} />
