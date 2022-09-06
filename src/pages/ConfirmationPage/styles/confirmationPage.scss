@@ -4,16 +4,16 @@
 
 // CANCELLATION PAGE STYLING
 
-.cancellation {
+.confirmation {
   display: flex;
   flex-direction: column;
   align-items: center;
   // Godkänner inte variabel
-  // background-color: $light-pink;
-  background-color: #fff6f9;
+  background-color: $light-pink;
+  // background-color: #fff6f9;
   height: 100vh;
 
-  .cancellation__message {
+  .confirmation__message {
     position: absolute;
     top: 35%;
     display: flex;
@@ -36,7 +36,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .cancellation__message {
+  .confirmation__message {
     img {
       height: 85px;
       width: 85px;
