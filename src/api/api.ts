@@ -96,7 +96,7 @@ export const updateBooking = async (booking: IBooking) => {
  */
 export const cancelBooking = async (bookingId: string) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/cancelBooking`, {
+    await fetch(`${API_URL}/bookings/cancelBooking`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
