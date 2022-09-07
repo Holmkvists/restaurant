@@ -6,10 +6,12 @@ table {
   display: block;
   overflow-x: auto;
   max-width: 90%;
+  max-height: 90vh;
   font-size: 10pt;
 }
 table th,
 table td {
+  white-space: nowrap;
   border: 1px solid rgba(216, 112, 147, 0.951);
 }
 

@@ -7,9 +7,11 @@ table {
   display: block;
   overflow-x: auto;
   max-width: 90%;
+  max-height: 90vh;
   font-size: 10pt;
   th,
   td {
+    white-space: nowrap;
     border: 1px solid $darker-pink;
   }
 }

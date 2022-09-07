@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../../variables/_variables.scss","adminPage.scss","adminPage.css"],"names":[],"mappings":"AAAQ,6EAAA;ACER;EACE,yBDGW;AEHb;ADCE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,8DAAA;EACA,4BAAA;EACA,wBAAA;EACA,0BAAA;ACCJ","file":"adminPage.css"}
+{"version":3,"sources":["../../../variables/_variables.scss","adminPage.scss","adminPage.css"],"names":[],"mappings":"AAAQ,6EAAA;ACER;EACE,yBDGW;AEHb;ADCE;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,8DAAA;EACA,4BAAA;EACA,wBAAA;EACA,0BAAA;ACCJ","file":"adminPage.css"}
