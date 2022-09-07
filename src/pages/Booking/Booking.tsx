@@ -1,4 +1,3 @@
-import { getAllBookings } from "api/api";
 import { IUserBooking } from "models/IUserBooking";
 import { useState } from "react";
 import { DateAndTime } from "./DateAndTime/DateAndTime";
@@ -16,8 +15,6 @@ export const Booking = () => {
     email: "",
     phone: "",
   });
-
-  getAllBookings();
 
   return (
     <div className="hero__container">
