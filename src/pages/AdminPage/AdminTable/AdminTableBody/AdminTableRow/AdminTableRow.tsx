@@ -10,7 +10,7 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
   const [date, setDate] = useState(props.booking.date);
   const [time, setTime] = useState(props.booking.time);
   const [email, setEmail] = useState(props.booking.email);
-  const [tables, setTables] = useState(props.booking.tables);
+  const [visitors, setVisitors] = useState(props.booking.visitors);
 
   const [isEditable, setIsEditable] = useState(false);
   const [style, setStyle] = useState({ backgroundColor: "transparent" });
@@ -28,7 +28,7 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       email,
       date,
       time,
-      tables,
+      visitors,
     };
     await patchBooking(booking);
     setIsEditable(false);
@@ -63,8 +63,8 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
         style={style}
         suppressContentEditableWarning
         contentEditable={isEditable}
-        onBlur={(e) => setTables(e.currentTarget.innerText)}>
-        {tables}
+        onBlur={(e) => setVisitors(e.currentTarget.innerText)}>
+        {visitors}
       </td>
       <td>
         <GenericButton size="s" handleClick={(e) => handleEdit()}>

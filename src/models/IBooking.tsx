@@ -2,6 +2,6 @@ export interface IBooking {
   email: string;
   date: string;
   time: string;
-  tables: string;
+  visitors: string;
   _id: string;
 }
