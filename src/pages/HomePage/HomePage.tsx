@@ -18,11 +18,17 @@ export const HomePage = () => {
         </div>
         <nav className="home__nav">
           <div className="lines"></div>
-          <Link to={"/meny"}>Meny</Link>
+          <Link to={"/meny"} data-cy="menuButton">
+            Meny
+          </Link>
           <div className="lg__screen__lines"></div>
-          <Link to={"/boka-bord"}>Boka bord</Link>
+          <Link to={"/boka-bord"} data-cy="bookingButton">
+            Boka bord
+          </Link>
           <div className="lg__screen__lines"></div>
-          <Link to={"/kontakt"}>Kontakt</Link>
+          <Link to={"/kontakt"} data-cy="contactButton">
+            Kontakt
+          </Link>
           <div className="lines"></div>
         </nav>
       </main>
