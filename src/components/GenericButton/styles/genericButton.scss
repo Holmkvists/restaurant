@@ -1,0 +1,23 @@
+@import "../../../variables/_variables";
+
+.test {
+  display: flex;
+  align-items: center;
+}
+
+.generic__btn {
+  padding: 3px;
+  cursor: pointer;
+  background-color: $black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $light-pink;
+    transform: scale(1.03);
+    transition: 0.2s ease;
+  }
+}

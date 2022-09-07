@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff6f9;
+  min-height: calc(100% - 50px);
+  padding-bottom: 25px;
+}
+.home .logo__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.home .logo__container .logo {
+  height: 110px;
+  width: 60px;
+}
+.home .logo__container .logo img {
+  width: 100%;
+}
+.home .logo__container span {
+  font-size: 20pt;
+  margin-top: 15px;
+}
+.home .home__nav {
+  position: static;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.home .home__nav .lines,
+.home .home__nav .lg__screen__lines {
+  width: 100%;
+  height: 5px;
+  background-color: #ffc1d1;
+}
+.home .home__nav .lg__screen__lines {
+  display: none;
+}
+.home .home__nav a {
+  margin: 2rem;
+  font-size: 16pt;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  white-space: nowrap;
+  width: 110px;
+  text-align: center;
+}
+.home .home__nav a:hover {
+  color: #ffc1d1;
+}
+
+@media only screen and (min-width: 768px) {
+  .home .home__nav {
+    flex-direction: row;
+    justify-content: center;
+    top: 45%;
+    margin-top: 150px;
+  }
+  .home .home__nav .lines {
+    width: 30%;
+  }
+  .home .home__nav .lg__screen__lines {
+    display: block;
+    width: 75px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .home .home__nav {
+    margin-top: 125px;
+  }
+  .home .logo__container {
+    margin-top: 60px;
+  }
+  .home .logo__container .logo {
+    height: 155px;
+    width: 85px;
+  }
+  .home .logo__container span {
+    font-size: 22pt;
+  }
+  .home .home__nav {
+    top: 50%;
+  }
+  .home .home__nav a {
+    font-size: 18pt;
+  }
+}/*# sourceMappingURL=homePage.css.map */

@@ -1,0 +1,9 @@
+@use "../../../../../../variables/variables" as *;
+
+tr {
+  td,
+  th {
+    border: 1px solid $darker-pink;
+    padding: 5px;
+  }
+}
