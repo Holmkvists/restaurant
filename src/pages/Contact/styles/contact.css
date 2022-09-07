@@ -1,35 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 .image__container {
+  background-color: #fff6f9;
   background-image: url("/public/assets/contact.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
+  overflow: auto;
 }
 
-.tester {
-  background-color: rgba(0, 0, 0, 0.316);
-  height: 100vh;
+.background__filter {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4901960784);
 }
 
-.contact__info {
+.heading__info {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  color: #ffc1d1;
-  margin-top: 10%;
-}
-
-.contact__info2 {
-  display: none;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 
 .h1__heading {
@@ -37,61 +27,69 @@
   align-items: center;
   justify-content: center;
   color: #ffc1d1;
-  margin-top: 5%;
+  padding: 5px;
 }
 
-.contact__info3 {
-  display: none;
+.contact__info-text {
+  color: #ffc1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.contact__telefon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffc1d1;
+  position: absolute;
+  bottom: 9%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact__openhours {
+  visibility: hidden;
+}
+
+h3 {
+  margin: 0%;
+}
+
+h1 {
+  margin: 0%;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact__info2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffc1d1;
-    padding: 10px;
-  }
-  .contact__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0%;
-  }
-  .contact__info3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #ffc1d1;
-  }
-  .contact__div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 300px;
-    position: relative;
-    left: 35px;
-  }
-  .heading__info {
-    margin-top: 120px;
+  .image__container {
+    margin: 0%;
   }
 }
 @media only screen and (min-width: 1220px) {
-  .h1__heading {
-    margin: 0%;
-  }
   .heading__info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 400px;
-    margin: 10px;
   }
-  .contact__div {
-    bottom: 0%;
+  .contact__telefon {
+    width: auto;
+    bottom: 20%;
+    left: 15%;
+  }
+  .contact__openhours {
+    visibility: visible;
+    color: #ffc1d1;
+    position: absolute;
+    bottom: 22.5%;
+    left: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=contact.css.map */
