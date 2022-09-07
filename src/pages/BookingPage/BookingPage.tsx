@@ -5,7 +5,7 @@ import { SignUpInfo } from "./SignUpInfo/SignUpInfo";
 import "./styles/booking.css";
 import { Header } from "../../components/Header/Header";
 
-export const Booking = () => {
+export const BookingPage = () => {
   const [dateSelected, setDateSelected] = useState(false);
   const [booking, setBooking] = useState<IUserBooking>({
     date: "",
