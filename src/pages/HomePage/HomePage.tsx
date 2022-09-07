@@ -1,6 +1,10 @@
-import "./styles/homePage.css";
+// IMPORTS
+
 import { Link } from "react-router-dom";
 import { Address } from "components/Address/Address";
+import "./styles/homePage.css";
+
+// COMPONENT
 
 export const HomePage = () => {
   return (
@@ -14,7 +18,7 @@ export const HomePage = () => {
         </div>
         <nav className="home__nav">
           <div className="lines"></div>
-          <Link to={"/menu"}>Meny</Link>
+          <Link to={"/meny"}>Meny</Link>
           <div className="lg__screen__lines"></div>
           <Link to={"/boka-bord"}>Boka bord</Link>
           <div className="lg__screen__lines"></div>

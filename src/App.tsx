@@ -1,12 +1,16 @@
-import "./main/styles/main.css";
+// IMPORTS
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "pages/HomePage/HomePage";
-import { Contact } from "./pages/Contact/Contact";
-import { NotFound } from "./pages/NotFound/NotFound";
-import { Booking } from "./pages/Booking/Booking";
-import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { Menu } from "pages/Menu/Menu";
-import { ConfirmationPage } from "components/ConfirmationPage/ConfirmationPage";
+import { Booking } from "./pages/Booking/Booking";
+import { Confirmation } from "components/Confirmation/Confirmation";
+import { Contact } from "./pages/Contact/Contact";
+import { AdminPage } from "./pages/AdminPage/AdminPage";
+import { NotFound } from "./pages/NotFound/NotFound";
+import "./main/styles/main.css";
+
+// COMPONENTS STRUCTURE
 
 function App() {
   return (
@@ -14,16 +18,16 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/meny" element={<Menu />} />
-        <Route path="/kontakt" element={<Contact />} />
         <Route path="/boka-bord" element={<Booking />} />
         <Route
           path="/bokningsbekraftelse"
-          element={<ConfirmationPage type="bokningsbekraftelse" />}
+          element={<Confirmation type="bokningsbekraftelse" />}
         />
         <Route
           path="/avbokningsbekraftelse/:id"
-          element={<ConfirmationPage type="avbokningsbekraftelse" />}
+          element={<Confirmation type="avbokningsbekraftelse" />}
         />
+        <Route path="/kontakt" element={<Contact />} />
         <Route path="/adminPage" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
