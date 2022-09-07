@@ -1,4 +1,4 @@
-import { getAvailableBookings } from "api/api";
+import { checkEnoughTables } from "api/api";
 import { IUserBooking } from "models/IUserBooking";
 import React, { useEffect } from "react";
 import { useState } from "react";
@@ -16,15 +16,15 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newBooking = { ...props.booking };
-    if (e.target.name == "date") {
+    if (e.target.name === "date") {
       newBooking.date = e.target.value;
     }
 
-    if (e.target.name == "time") {
+    if (e.target.name === "time") {
       newBooking.time = +e.target.value;
     }
 
-    if (e.target.name == "visitors") {
+    if (e.target.name === "visitors") {
       newBooking.visitors = +e.target.value;
     }
 
@@ -36,7 +36,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
   useEffect(() => {
     const checkBookings = async () => {
       if (props.booking.visitors && props.booking.time && props.booking.date) {
-        const isAvailable = await getAvailableBookings(
+        const isEnoughTables = await checkEnoughTables(
           props.booking.date,
           props.booking.time.toString(),
           props.booking.visitors.toString()
@@ -44,7 +44,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
 
         setIsAttempted(true);
 
-        if (isAvailable) {
+        if (isEnoughTables) {
           setIsDisabled(false);
           return;
         }
