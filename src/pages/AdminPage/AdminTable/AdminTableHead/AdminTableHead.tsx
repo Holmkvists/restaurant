@@ -8,7 +8,7 @@ export const AdminTableHead = () => {
         <th>Email</th>
         <th>Date</th>
         <th>Time</th>
-        <th>Tables</th>
+        <th>Visitors</th>
         <th colSpan={2}>Manage</th>
       </tr>
     </thead>
