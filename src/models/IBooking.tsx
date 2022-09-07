@@ -4,4 +4,5 @@ export interface IBooking {
   time: string;
   visitors: string;
   _id: string;
+  originalEmail: string;
 }
