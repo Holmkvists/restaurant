@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "pages/HomePage/HomePage";
 import { Menu } from "pages/Menu/Menu";
 import { Booking } from "./pages/Booking/Booking";
-import { ConfirmationPage } from "components/ConfirmationPage/ConfirmationPage";
+import { Confirmation } from "components/ConfirmationPage/Confirmation";
 import { Contact } from "./pages/Contact/Contact";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { NotFound } from "./pages/NotFound/NotFound";
@@ -17,11 +17,11 @@ function App() {
         <Route path="/boka-bord" element={<Booking />} />
         <Route
           path="/bokningsbekraftelse"
-          element={<ConfirmationPage type="bokningsbekraftelse" />}
+          element={<Confirmation type="bokningsbekraftelse" />}
         />
         <Route
           path="/avbokningsbekraftelse/:id"
-          element={<ConfirmationPage type="avbokningsbekraftelse" />}
+          element={<Confirmation type="avbokningsbekraftelse" />}
         />
         <Route path="/kontakt" element={<Contact />} />
         <Route path="/adminPage" element={<AdminPage />} />
