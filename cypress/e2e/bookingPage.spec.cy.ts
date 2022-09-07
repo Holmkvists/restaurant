@@ -1,4 +1,4 @@
-describe("Tests for homePage", () => {
+describe("Tests for bookingPage", () => {
   beforeEach(() => {
     cy.visit("/boka-bord");
   });

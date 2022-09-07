@@ -37,15 +37,15 @@ export const Confirmation = (props: ConfirmationProps) => {
               <img src="/assets/happy-smiley.png" alt="happy-smiley" />
               <p>
                 Din tid har nu bokats. Passa på att spana in vår meny
-                <Link to="/meny">här!</Link>
+                <Link to="/meny"> här!</Link>
               </p>
             </>
           ) : (
             <>
               <img src="/assets/sad-smiley.png" alt="sad-smiley" />
               <p>
-                Din tid har avbokats. Boka en ny tid{" "}
-                <Link to="/boka-bord">här!</Link>
+                Din tid har avbokats. Boka en ny tid
+                <Link to="/boka-bord"> här!</Link>
               </p>
             </>
           )}

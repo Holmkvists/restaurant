@@ -1,6 +1,6 @@
-describe("Tests for menuPage", () => {
+describe("Tests for bokningsbekraftelse", () => {
   beforeEach(() => {
-    cy.visit("/meny");
+    cy.visit("/bokningsbekraftelse");
   });
 
   it("Test Home Button", () => {
@@ -24,7 +24,9 @@ describe("Tests for menuPage", () => {
       .should("eq", "http://localhost:3000/kontakt");
   });
 
-  it("Menu exists", () => {
-    cy.get('[data-cy="menuImage"]');
+  it("Image renders properly", () => {
+    cy.get("img").should(([img]) => {
+      expect(img.naturalWidth).greaterThan(0);
+    });
   });
 });
