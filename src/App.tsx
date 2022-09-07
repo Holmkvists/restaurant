@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "pages/HomePage/HomePage";
 import { Menu } from "pages/Menu/Menu";
 import { Booking } from "./pages/Booking/Booking";
-import { Confirmation } from "components/ConfirmationPage/Confirmation";
+import { Confirmation } from "components/Confirmation/Confirmation";
 import { Contact } from "./pages/Contact/Contact";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { NotFound } from "./pages/NotFound/NotFound";
