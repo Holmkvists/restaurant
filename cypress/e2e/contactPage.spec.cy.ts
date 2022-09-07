@@ -1,6 +1,6 @@
 describe("Tests for homePage", () => {
   beforeEach(() => {
-    cy.visit("/meny");
+    cy.visit("/kontakt");
   });
 
   it("Test Home Button", () => {
@@ -24,7 +24,22 @@ describe("Tests for homePage", () => {
       .should("eq", "http://localhost:3000/kontakt");
   });
 
-  it("Menu exists", () => {
-    cy.get('[data-cy="menuImage"]');
+  it("Contact Information Mobile", () => {
+    cy.viewport(375, 667)
+      .get('[data-cy="contactOne"]')
+      .should("be.visible")
+      .get('[data-cy="contactTwo"]')
+      .should("not.be.visible")
+      .get('[data-cy="contactThree"]')
+      .should("not.be.visible");
+  });
+
+  it("Contact Information Non-Mobile", () => {
+    cy.get('[data-cy="contactOne"]')
+      .should("be.visible")
+      .get('[data-cy="contactTwo"]')
+      .should("be.visible")
+      .get('[data-cy="contactThree"]')
+      .should("be.visible");
   });
 });

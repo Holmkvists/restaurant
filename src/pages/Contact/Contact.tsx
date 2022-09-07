@@ -7,7 +7,7 @@ export const Contact = () => {
         <Header />
         <div className="heading__info">
           <h1 className="h1__heading">Välkommen!</h1>
-          <div className="contact__info2">
+          <div className="contact__info2" data-cy="contactTwo">
             <h3>
               Lokalen är liten men mysig, det betyder tyvärr också att det kan
             </h3>
@@ -16,13 +16,13 @@ export const Contact = () => {
           </div>
         </div>
         <div className="contact__div">
-          <div className="contact__info3">
+          <div className="contact__info3" data-cy="contactThree">
             <h3>Middag </h3>
             <h3>Måndag - Söndag:</h3>
             <h3>18:00 - 21:00</h3>
             <h3>21:00 - 24:00</h3>
           </div>
-          <div className="contact__info">
+          <div className="contact__info" data-cy="contactOne">
             <h3>telefon</h3>
             <h3>telefonnummer: 08-796 81 02</h3>
             <h3>våra telefon tider är:</h3>

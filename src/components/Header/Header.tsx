@@ -9,7 +9,7 @@ export const Header = () => {
       <ul className="header__ul">
         <span className="header__span__long"></span>
         <li className="header__li">
-          <Link className="animation" to={"/"} data-cy="homeButtonz">
+          <Link className="animation" to={"/"} data-cy="homeButton">
             Hem
           </Link>
         </li>
