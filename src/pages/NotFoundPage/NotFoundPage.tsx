@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./styles/notfound.css";
 
-export const NotFound = () => {
+export const NotFoundPage = () => {
   return (
     <div className="container">
       <div className="notfound__container">

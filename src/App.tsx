@@ -5,9 +5,9 @@ import { HomePage } from "pages/HomePage/HomePage";
 import { MenuPage } from "pages/MenuPage/MenuPage";
 import { BookingPage } from "./pages/BookingPage/BookingPage";
 import { Confirmation } from "components/Confirmation/Confirmation";
-import { Contact } from "./pages/Contact/Contact";
+import { ContactPage } from "./pages/ContactPage/ContactPage";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
-import { NotFound } from "./pages/NotFound/NotFound";
+import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import "./main/styles/main.css";
 
 // COMPONENTS STRUCTURE
@@ -27,9 +27,9 @@ function App() {
           path="/avbokningsbekraftelse/:id"
           element={<Confirmation type="avbokningsbekraftelse" />}
         />
-        <Route path="/kontakt" element={<Contact />} />
+        <Route path="/kontakt" element={<ContactPage />} />
         <Route path="/adminPage" element={<AdminPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
