@@ -1,15 +1,15 @@
 import { Address } from "components/Address/Address";
 import { Header } from "components/Header/Header";
 import { Link, useParams } from "react-router-dom";
-import "./styles/confirmationPage.css";
+import "./styles/confirmation.css";
 import { useEffect } from "react";
 import { cancelBooking } from "api/api";
 
-interface ConfirmationPageProps {
+interface ConfirmationProps {
   type: string;
 }
 
-export const ConfirmationPage = (props: ConfirmationPageProps) => {
+export const Confirmation = (props: ConfirmationProps) => {
   const { id } = useParams();
 
   useEffect(() => {
