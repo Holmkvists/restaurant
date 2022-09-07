@@ -69,7 +69,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               onChange={handleChange}
               type="date"
               name="date"
-              id=""
+              data-cy="dateInput"
               className="date__input"
             />
           </div>
@@ -79,6 +79,9 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               onChange={handleChange}
               type="number"
               name="visitors"
+              min={1}
+              max={90}
+              data-cy="visitorInput"
               className="amount__input"
             />
           </div>
@@ -93,6 +96,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
                 name="time"
                 id=""
                 value="18"
+                data-cy="dinner18"
               />
               <label htmlFor="">18:00</label>
             </div>
@@ -103,6 +107,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
                 name="time"
                 id=""
                 value="21"
+                data-cy="dinner21"
               />
               <label htmlFor="">21:00</label>
             </div>
@@ -114,7 +119,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           onClick={() => props.setDateSelected(true)}
           disabled={isDisabled}
           className="next__btn"
-        >
+          data-cy="nextButton">
           Nästa
         </button>
         {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
