@@ -21,7 +21,14 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   }
 };
 
-export const getAvailableBookings = async (
+/**
+ * Checks if there is room for this booking at the provided date/time
+ * @param date Date of the booking
+ * @param time Time of the booking
+ * @param visitors Amount of visitors
+ * @returns {boolean} True/False
+ */
+export const checkEnoughTables = async (
   date: string,
   time: string,
   visitors: string
@@ -35,7 +42,10 @@ export const getAvailableBookings = async (
     );
 
     const body = await response.json();
-    console.log(body.data);
+
+    if (typeof body.data[0] !== "boolean") {
+      return false;
+    }
 
     return body.data[0];
   } catch (error) {
