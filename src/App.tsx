@@ -2,7 +2,7 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "pages/HomePage/HomePage";
-import { Menu } from "pages/Menu/Menu";
+import { MenuPage } from "pages/MenuPage/MenuPage";
 import { Booking } from "./pages/Booking/Booking";
 import { Confirmation } from "components/Confirmation/Confirmation";
 import { Contact } from "./pages/Contact/Contact";
@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/meny" element={<Menu />} />
+        <Route path="/meny" element={<MenuPage />} />
         <Route path="/boka-bord" element={<Booking />} />
         <Route
           path="/bokningsbekraftelse"

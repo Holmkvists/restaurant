@@ -1,7 +1,7 @@
 import { Header } from "components/Header/Header";
 import "./styles/menu.css";
 
-export const Menu = () => {
+export const MenuPage = () => {
   return (
     <div className="menu__full">
       <Header />
