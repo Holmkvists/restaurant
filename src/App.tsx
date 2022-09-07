@@ -1,4 +1,5 @@
-import "./main/styles/main.css";
+// IMPORTS
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "pages/HomePage/HomePage";
 import { Menu } from "pages/Menu/Menu";
@@ -7,6 +8,9 @@ import { Confirmation } from "components/Confirmation/Confirmation";
 import { Contact } from "./pages/Contact/Contact";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { NotFound } from "./pages/NotFound/NotFound";
+import "./main/styles/main.css";
+
+// COMPONENTS STRUCTURE
 
 function App() {
   return (
