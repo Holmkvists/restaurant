@@ -1,4 +1,4 @@
-import { postBooking } from "api/api";
+import { submitBooking } from "api/api";
 import { IUserBooking } from "models/IUserBooking";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -39,7 +39,7 @@ export const SignUpInfo = (props: ISignUpInfo) => {
   }, [props.booking]);
 
   const handleSubmit = async () => {
-    await postBooking(props.booking);
+    await submitBooking(props.booking);
     redirect("/bokningsbekraftelse");
   };
 
@@ -85,8 +85,7 @@ export const SignUpInfo = (props: ISignUpInfo) => {
           <button
             onClick={() => handleSubmit()}
             className="complete__btn"
-            disabled={isDisabled}
-          >
+            disabled={isDisabled}>
             Slutför bokning
           </button>
         </div>

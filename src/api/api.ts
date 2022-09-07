@@ -8,7 +8,7 @@ const API_URL = "http://localhost:8080" as const;
 
 /**
  * Fetches all current bookings from  the API
- * @returns An array of current bookings
+ * @returns {Promise<IBooking[]>} An array of current bookings
  */
 export const getAllBookings = async (): Promise<IBooking[]> => {
   try {
@@ -54,19 +54,21 @@ export const checkEnoughTables = async (
   }
 };
 
-export const postBooking = async (booking: IUserBooking) => {
+/**
+ * Submits a booking to he server.
+ * @param booking
+ */
+export const submitBooking = async (booking: IUserBooking) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/createBooking`, {
+    await fetch(`${API_URL}/bookings/createBooking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(booking),
     });
-    return response.status == 200 ? true : false;
   } catch (error) {
     console.log(error);
-    return false;
   }
 };
 
