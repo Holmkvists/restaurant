@@ -6,7 +6,7 @@ export const MenuPage = () => {
     <div className="menu__full">
       <Header />
       <div className="menu__container">
-        <div className="menu__hero"></div>
+        <div className="menu__hero" data-cy="menuImage"></div>
       </div>
     </div>
   );
