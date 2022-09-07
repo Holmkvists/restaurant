@@ -7,7 +7,7 @@ export const NotFoundPage = () => {
       <div className="notfound__container">
         <h1 className="notfound__heading">Oops, något blev fel,</h1>
         <h1 className="notfound__heading">sidan hittades inte!</h1>
-        <Link className="notfound__btn" to={"/"}>
+        <Link className="notfound__btn" to={"/"} data-cy="homeButton">
           Tillbaka hem
         </Link>
       </div>
