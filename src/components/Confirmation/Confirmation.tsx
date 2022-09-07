@@ -7,9 +7,13 @@ import { Header } from "components/Header/Header";
 import { Address } from "components/Address/Address";
 import "./styles/confirmation.css";
 
+// PROPS
+
 interface ConfirmationProps {
   type: string;
 }
+
+// COMPONENT
 
 export const Confirmation = (props: ConfirmationProps) => {
   const { id } = useParams();
