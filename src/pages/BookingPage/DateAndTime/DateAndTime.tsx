@@ -29,8 +29,6 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
     }
 
     props.setBooking(newBooking);
-
-    console.log(newBooking);
   };
 
   useEffect(() => {

@@ -29,7 +29,6 @@ export const SignUpInfo = (props: ISignUpInfo) => {
     }
 
     props.setBooking(newBooking);
-    console.log(newBooking);
   };
 
   useEffect(() => {
