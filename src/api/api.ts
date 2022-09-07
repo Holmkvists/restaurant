@@ -75,21 +75,18 @@ export const submitBooking = async (booking: IUserBooking) => {
 /**
  * Updates a booking by sending a patch request
  * @param booking IBooking
- * @returns A boolean indicating success or fail
  */
-export const patchBooking = async (booking: IBooking) => {
+export const updateBooking = async (booking: IBooking) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/patchBooking`, {
+    await fetch(`${API_URL}/bookings/patchBooking`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(booking),
     });
-    return response.status == 200 ? true : false;
   } catch (error) {
     console.log(error);
-    return false;
   }
 };
 

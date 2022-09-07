@@ -1,4 +1,4 @@
-import { patchBooking } from "api/api";
+import { updateBooking } from "api/api";
 import { GenericButton } from "components/GenericButton/GenericButton";
 import { IBooking } from "models/IBooking";
 import { useState } from "react";
@@ -32,7 +32,7 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       visitors,
       originalEmail,
     };
-    await patchBooking(booking);
+    await updateBooking(booking);
     setIsEditable(false);
     setStyle({ backgroundColor: "transparent" });
   };
