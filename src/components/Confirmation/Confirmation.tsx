@@ -1,9 +1,11 @@
-import { Address } from "components/Address/Address";
-import { Header } from "components/Header/Header";
-import { Link, useParams } from "react-router-dom";
-import "./styles/confirmation.css";
+// IMPORTS
+
 import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { cancelBooking } from "api/api";
+import { Header } from "components/Header/Header";
+import { Address } from "components/Address/Address";
+import "./styles/confirmation.css";
 
 interface ConfirmationProps {
   type: string;
@@ -12,6 +14,8 @@ interface ConfirmationProps {
 export const Confirmation = (props: ConfirmationProps) => {
   const { id } = useParams();
 
+  // DELETES BOOKING FROM DATABASE IF USER IS DIRECTED TO
+  // THIS PAGE THROUGH CANCELLATION LINK IN RECEIVED EMAIL
   useEffect(() => {
     if (id && props.type != "bokningsbekraftelse") {
       cancelBooking(id);
