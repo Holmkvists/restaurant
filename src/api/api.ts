@@ -22,6 +22,21 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
 };
 
 /**
+ * Fetches all archived bookings from the API
+ * @returns {Promise<IBooking[]>} An array of current bookings
+ */
+export const getArchivedBookings = async (): Promise<IBooking[]> => {
+  try {
+    const response = await fetch(`${API_URL}/bookings/getArchivedBookings`);
+    const body = await response.json();
+    return body.data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
+
+/**
  * Checks if there is room for this booking at the provided date/time
  * @param date Date of the booking
  * @param time Time of the booking

@@ -2,11 +2,14 @@ import { AdminTableBody } from "./AdminTableBody/AdminTableBody";
 import { AdminTableHead } from "./AdminTableHead/AdminTableHead";
 import "./styles/adminTable.css";
 
-export const AdminTable = () => {
+interface AdminTableProps {
+  active: boolean;
+}
+export const AdminTable = (props: AdminTableProps) => {
   return (
     <table>
       <AdminTableHead />
-      <AdminTableBody />
+      <AdminTableBody active={props.active} />
     </table>
   );
 };

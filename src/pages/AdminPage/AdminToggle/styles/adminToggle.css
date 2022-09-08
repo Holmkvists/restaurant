@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+.admin__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  width: 20vh;
+  border: 3px solid rgba(216, 112, 147, 0.951);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.admin__toggle div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  color: gray;
+  cursor: pointer;
+}
+.admin__toggle div.active {
+  background-color: #ffc1d1;
+  color: black;
+}/*# sourceMappingURL=adminToggle.css.map */

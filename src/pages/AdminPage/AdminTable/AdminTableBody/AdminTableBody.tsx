@@ -1,18 +1,23 @@
-import { getAllBookings } from "api/api";
+import { getAllBookings, getArchivedBookings } from "api/api";
 import { IBooking } from "models/IBooking";
 import { useEffect, useState } from "react";
 import { AdminTableRow } from "./AdminTableRow/AdminTableRow";
 
-export const AdminTableBody = () => {
+interface AdminTableBodyProps {
+  active: boolean;
+}
+export const AdminTableBody = (props: AdminTableBodyProps) => {
   const [bookings, setBookings] = useState<IBooking[]>([]);
 
   useEffect(() => {
     async function getBookings() {
-      const bookings = await getAllBookings();
+      const bookings = props.active
+        ? await getAllBookings()
+        : await getArchivedBookings();
       setBookings(bookings);
     }
     getBookings();
-  }, []);
+  }, [props.active]);
 
   return (
     <tbody>

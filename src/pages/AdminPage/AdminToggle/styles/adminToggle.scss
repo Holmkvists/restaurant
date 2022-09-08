@@ -1,0 +1,28 @@
+@use "../../../../variables/variables" as *;
+
+.admin__toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    width: 20vh;
+    border: 3px solid $darker-pink;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    user-select: none;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        color: gray;
+        cursor: pointer;
+
+        &.active{
+            background-color: $dark-pink;
+            color:black;
+        }
+    }
+}
