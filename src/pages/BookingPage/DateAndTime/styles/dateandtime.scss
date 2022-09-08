@@ -8,16 +8,15 @@
   background-size: cover;
   .hero__filter {
     height: 100vh;
-    // background-color: $black;
+    background-color: rgba(0, 0, 0, 0.273);
   }
   .booking__content {
     display: flex;
     align-items: center;
     margin-top: 100px;
     flex-direction: column;
-
     .form__container {
-      background-color: $dark-pink;
+      background-color: #ffc1d1f1;
       height: 380px;
       width: 500px;
       display: flex;
@@ -25,59 +24,68 @@
       justify-content: center;
       align-items: center;
       border-radius: 5px;
+      position: relative;
     }
   }
-}
-
-.heading__h1 {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.next__btn-form {
-  width: 300px;
-}
-
-.next__btn {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.form__div {
-  display: flex;
-  justify-content: flex-end;
-  width: auto;
-}
-
-.next__btn:enabled {
-  padding: 3px;
-  width: 100px;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: $black;
-  color: white;
-  &:hover {
-    transform: scale(1.03);
-    transition: ease-in-out 0.2s;
+  .next__btn {
+    justify-content: center;
   }
-}
-.next__btn:disabled {
-  padding: 3px;
-  width: 100px;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
+  .next__btn:disabled {
+    padding: 3px;
+    width: 100px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  .next__btn:enabled {
+    padding: 3px;
+    width: 100px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: $black;
+    color: white;
+    &:hover {
+      transform: scale(1.03);
+      transition: ease-in-out 0.2s;
+    }
+  }
+  .heading__container {
+    padding: 20px;
+    .heading__h1 {
+      text-decoration: underline;
+    }
+  }
+  .date__input-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .next__btn-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    flex-grow: 1;
+  }
+  .date__time-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fullybooked__msg {
+    position: absolute;
+    bottom: 10%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-  .form__container {
-    width: 100%;
+  .next__btn-container {
+    justify-content: space-evenly;
   }
-
-  .booking__input2 {
-    width: 149px;
+  .fullybooked__msg {
+    position: relative;
   }
 }

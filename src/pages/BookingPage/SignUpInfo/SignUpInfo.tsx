@@ -44,7 +44,10 @@ export const SignUpInfo = (props: ISignUpInfo) => {
 
   return (
     <div className="signup__container">
-      <button onClick={() => props.setDateSelected(false)}>
+      <button
+        className="arrow__btn"
+        onClick={() => props.setDateSelected(false)}
+      >
         <i className="gg-arrow-left"></i>
       </button>
       <header className="signup__header">
@@ -84,7 +87,8 @@ export const SignUpInfo = (props: ISignUpInfo) => {
           <button
             onClick={() => handleSubmit()}
             className="complete__btn"
-            disabled={isDisabled}>
+            disabled={isDisabled}
+          >
             Slutför bokning
           </button>
         </div>
