@@ -1,18 +1,19 @@
+import { Address } from "components/Address/Address";
 import { Header } from "components/Header/Header";
 import "./styles/contact.css";
 export const ContactPage = () => {
   return (
     <div className="image__container">
-      <div className="tester">
+      <div className="background__filter">
         <Header />
         <div className="heading__info">
           <h1 className="h1__heading">Välkommen!</h1>
           <div className="contact__info2" data-cy="contactTwo">
             <h3>
               Lokalen är liten men mysig, det betyder tyvärr också att det kan
+              vara trångt att få plats med barnvagn och liknade. om så är
+              fallet, maila oss gärna så ska vi försöka lösa det!
             </h3>
-            <h3>vara trångt att få plats med barnvagn och liknade. om så är</h3>
-            <h3>fallet, maila oss gärna så ska vi försöka lösa det!</h3>
           </div>
         </div>
         <div className="contact__div">
@@ -22,9 +23,8 @@ export const ContactPage = () => {
             <h3>18:00 - 21:00</h3>
             <h3>21:00 - 24:00</h3>
           </div>
-          <div className="contact__info" data-cy="contactOne">
-            <h3>telefon</h3>
-            <h3>telefonnummer: 08-796 81 02</h3>
+          <div className="contact__telefon" data-cy="contactOne">
+            <h3>Telefonnummer: 08-796 81 02</h3>
             <h3>våra telefon tider är:</h3>
             <h3>onsdag-söndag 16:00-21:00</h3>
             <p>Malmskillnadsgatan 13, 111 57, Stockholm</p>
