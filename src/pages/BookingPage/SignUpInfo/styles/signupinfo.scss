@@ -87,6 +87,11 @@
 }
 // #########BACK ARROW################
 
+.arrow__btn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
 .gg-arrow-left {
   box-sizing: border-box;
   position: relative;
@@ -95,6 +100,7 @@
   width: 22px;
   height: 22px;
   color: $black;
+  cursor: pointer;
   &:hover {
     transform: scale(1.2);
     transition: ease 0.4s;
