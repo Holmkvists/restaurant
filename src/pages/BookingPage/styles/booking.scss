@@ -1,11 +1,8 @@
 @import "../../../variables/variables.css";
 
-// .hero__container .datetime__container .date-time__div .amount__div {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-evenly;
-//   gap: 0;
-// }
+.datetime__container{
+  padding: 5%;
+}
 
 @media only screen and (max-width: 600px) {
   .hero__container .booking__content .form__container {
