@@ -14,30 +14,47 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [isAttempted, setIsAttempted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [visitors, setVisitors] = useState("");
+  const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
+
+  function editVisitors(e: React.ChangeEvent<HTMLInputElement>) {
+    if (+e.target.value < 1) {
+      setVisitors("1");
+    } else if (+e.target.value > 90) {
+      setVisitors("90");
+    } else {
+      setVisitors(e.target.value);
+    }
+    const tempBooking = { ...props.booking };
+    tempBooking.visitors = +visitors;
+  }
+
+  function handleSubmit(e: React.MouseEvent) {
+    e.preventDefault();
+
     const newBooking = { ...props.booking };
-    if (e.target.name === "date") {
-      newBooking.date = e.target.value;
-    }
-
-    if (e.target.name === "time") {
-      newBooking.time = +e.target.value;
-    }
-
-    if (e.target.name === "visitors") {
-      newBooking.visitors = +e.target.value;
-    }
+    newBooking.visitors = +visitors;
+    newBooking.date = date;
+    newBooking.time = +time;
 
     props.setBooking(newBooking);
-  };
 
+    props.setDateSelected(true);
+  }
   useEffect(() => {
-    const checkBookings = async () => {
-      if (props.booking.visitors && props.booking.time && props.booking.date) {
+    async function checkBookings() {
+      if (visitors && time && date) {
+        const newBooking = { ...props.booking };
+        newBooking.visitors = +visitors;
+        newBooking.time = +time;
+        newBooking.date = date;
+        props.setBooking(newBooking);
+
         const isEnoughTables = await checkEnoughTables(
-          props.booking.date,
-          props.booking.time.toString(),
-          props.booking.visitors.toString()
+          date,
+          time.toString(),
+          visitors.toString()
         );
 
         setIsAttempted(true);
@@ -49,9 +66,9 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
 
         setIsDisabled(true);
       }
-    };
+    }
     checkBookings();
-  }, [props.booking]);
+  }, [visitors, time, date]);
 
   return (
     <div className="datetime__container">
@@ -64,7 +81,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           <div className="date__input-label">
             <label htmlFor="">Välj datum</label>
             <input
-              onChange={handleChange}
+              onChange={(e) => setDate(e.target.value)}
               type="date"
               name="date"
               data-cy="dateInput"
@@ -75,11 +92,12 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           <div className="date__input-label">
             <label htmlFor="">Välj antal personer</label>
             <input
-              onChange={handleChange}
+              onChange={editVisitors}
               type="number"
               name="visitors"
               min={1}
               max={90}
+              value={visitors}
               data-cy="visitorInput"
               className="amount__input"
             />
@@ -91,10 +109,9 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           <div className="booking__radiolabel">
             <div>
               <input
-                onChange={handleChange}
+                onChange={(e) => setTime(e.target.value)}
                 type="radio"
                 name="time"
-                id=""
                 value="18"
                 data-cy="dinner18"
               />
@@ -102,10 +119,9 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
             </div>
             <div>
               <input
-                onChange={handleChange}
+                onChange={(e) => setTime(e.target.value)}
                 type="radio"
                 name="time"
-                id=""
                 value="21"
                 data-cy="dinner21"
               />
@@ -120,7 +136,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           <p className="fullybooked__msg">Tyvärr fullbokat</p>
         )}
         <button
-          onClick={() => props.setDateSelected(true)}
+          onClick={handleSubmit}
           disabled={isDisabled}
           className="next__btn"
           data-cy="nextButton"
