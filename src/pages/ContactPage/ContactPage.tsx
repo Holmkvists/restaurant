@@ -8,7 +8,7 @@ export const ContactPage = () => {
         <Header />
         <div className="heading__info">
           <h1 className="h1__heading">Välkommen!</h1>
-          <div className="contact__info2" data-cy="contactTwo">
+          <div className="contact__info-text">
             <h3>
               Lokalen är liten men mysig, det betyder tyvärr också att det kan
               vara trångt att få plats med barnvagn och liknade. om så är
@@ -17,13 +17,13 @@ export const ContactPage = () => {
           </div>
         </div>
         <div className="contact__div">
-          <div className="contact__info3" data-cy="contactThree">
+          <div className="contact__openhours">
             <h3>Middag </h3>
             <h3>Måndag - Söndag:</h3>
             <h3>18:00 - 21:00</h3>
             <h3>21:00 - 24:00</h3>
           </div>
-          <div className="contact__telefon" data-cy="contactOne">
+          <div className="contact__telefon">
             <h3>Telefonnummer: 08-796 81 02</h3>
             <h3>våra telefon tider är:</h3>
             <h3>onsdag-söndag 16:00-21:00</h3>
