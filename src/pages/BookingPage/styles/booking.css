@@ -1,37 +1,19 @@
 @import "../../../variables/variables.css";
-.date__input-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.heading__h1 {
-  text-decoration: underline;
-}
-
-.hero__container .datetime__container .date-time__div .amount__div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 0;
-}
-
-.form__div {
-  display: flex;
-  justify-content: center;
-  width: auto;
-}
-
 @media only screen and (max-width: 600px) {
   .hero__container .booking__content .form__container {
     width: 92%;
   }
-  .date-time__div {
-    flex-direction: column;
-    gap: 10px;
+  .date__time-container {
+    border: 1px rgb(255, 255, 53);
   }
-  .date-time__div {
+  .hero__container .date__time-container {
+    display: block;
+    width: 160px;
+    margin-left: 88px;
+  }
+  .radio__btn-container {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 88px;
   }
 }/*# sourceMappingURL=booking.css.map */

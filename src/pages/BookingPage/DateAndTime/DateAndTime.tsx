@@ -55,12 +55,12 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
 
   return (
     <div className="datetime__container">
-      <div>
+      <div className="heading__container">
         <h1 className="heading__h1">Boka bord!</h1>
         <p>Välj tid och datum för att se tillgänglighet</p>
       </div>
       <div className="date-time__div">
-        <div className="booking__input">
+        <div className="date__time-container">
           <div className="date__input-label">
             <label htmlFor="">Välj datum</label>
             <input
@@ -71,8 +71,9 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               className="date__input"
             />
           </div>
-          <div className="amount__div">
-            <p>Välj antal personer</p>
+          {/* <div className="visitors__container"> */}
+          <div className="date__input-label">
+            <label htmlFor="">Välj antal personer</label>
             <input
               onChange={handleChange}
               type="number"
@@ -82,9 +83,10 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               data-cy="visitorInput"
               className="amount__input"
             />
+            {/* </div> */}
           </div>
         </div>
-        <div className="booking__input2">
+        <div className="radio__btn-container">
           <label htmlFor="">Välj en tid</label>
           <div className="booking__radiolabel">
             <div>
@@ -112,16 +114,19 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           </div>
         </div>
       </div>
-      <div className="form__div">
+      <div className="next__btn-container">
         <button
           onClick={() => props.setDateSelected(true)}
           disabled={isDisabled}
           className="next__btn"
-          data-cy="nextButton">
+          data-cy="nextButton"
+        >
           Nästa
         </button>
-        {isDisabled && isAttempted && <p>Tyvärr fullbokat</p>}
       </div>
+      {isDisabled && isAttempted && (
+        <p className="fullybooked__msg">Tyvärr fullbokat</p>
+      )}
     </div>
   );
 };
