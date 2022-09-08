@@ -10,6 +10,8 @@
   justify-content: space-evenly;
   height: 70px;
   align-items: center;
+  margin: 0%;
+  padding: 0%;
 }
 
 .header__li {
