@@ -26,20 +26,20 @@ describe("Tests for contactPage", () => {
 
   it("Contact Information Mobile", () => {
     cy.viewport(375, 667)
-      .get('[data-cy="contactOne"]')
+      .get('[data-cy="infoText"]')
       .should("be.visible")
-      .get('[data-cy="contactTwo"]')
+      .get('[data-cy="openHours"]')
       .should("not.be.visible")
-      .get('[data-cy="contactThree"]')
-      .should("not.be.visible");
+      .get('[data-cy="phone"]')
+      .should("be.visible");
   });
 
   it("Contact Information Non-Mobile", () => {
-    cy.get('[data-cy="contactOne"]')
+    cy.get('[data-cy="infoText"]')
       .should("be.visible")
-      .get('[data-cy="contactTwo"]')
+      .get('[data-cy="openHours"]')
       .should("be.visible")
-      .get('[data-cy="contactThree"]')
+      .get('[data-cy="phone"]')
       .should("be.visible");
   });
 });

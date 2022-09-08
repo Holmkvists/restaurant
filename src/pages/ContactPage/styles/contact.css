@@ -65,12 +65,7 @@ h1 {
   margin: 0%;
 }
 
-@media only screen and (min-width: 768px) {
-  .image__container {
-    margin: 0%;
-  }
-}
-@media only screen and (min-width: 1220px) {
+@media only screen and (min-width: 800px) {
   .heading__info {
     display: flex;
     flex-direction: column;
