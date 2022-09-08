@@ -1,7 +1,8 @@
 .menu__container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 70px);
 }
 
 .menu__hero {
@@ -9,7 +10,13 @@
   justify-content: center;
   background-image: url("../../../../public/assets/test2.svg");
   height: 80%;
-  width: 40%;
+  width: 80%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .menu__hero {
+    width: 40%;
+  }
 }/*# sourceMappingURL=menu.css.map */
