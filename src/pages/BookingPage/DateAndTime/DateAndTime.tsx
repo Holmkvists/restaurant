@@ -114,7 +114,11 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           </div>
         </div>
       </div>
+
       <div className="next__btn-container">
+        {isDisabled && isAttempted && (
+          <p className="fullybooked__msg">Tyvärr fullbokat</p>
+        )}
         <button
           onClick={() => props.setDateSelected(true)}
           disabled={isDisabled}
@@ -124,9 +128,6 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
           Nästa
         </button>
       </div>
-      {isDisabled && isAttempted && (
-        <p className="fullybooked__msg">Tyvärr fullbokat</p>
-      )}
     </div>
   );
 };

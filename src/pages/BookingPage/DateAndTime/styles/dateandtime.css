@@ -76,8 +76,7 @@
   justify-content: space-between;
 }
 .hero__container .fullybooked__msg {
-  position: absolute;
-  bottom: 10%;
+  margin: 20px 0 0 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -85,6 +84,6 @@
     justify-content: space-evenly;
   }
   .fullybooked__msg {
-    position: relative;
+    margin: 0;
   }
 }/*# sourceMappingURL=dateandtime.css.map */
