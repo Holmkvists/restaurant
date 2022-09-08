@@ -9,7 +9,7 @@ export const AdminTableHead = () => {
         <th>Date</th>
         <th>Time</th>
         <th>Visitors</th>
-        <th colSpan={2}>Manage</th>
+        <th colSpan={3}>Manage</th>
       </tr>
     </thead>
   );

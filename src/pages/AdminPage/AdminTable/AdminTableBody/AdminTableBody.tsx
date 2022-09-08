@@ -8,6 +8,7 @@ interface AdminTableBodyProps {
 }
 export const AdminTableBody = (props: AdminTableBodyProps) => {
   const [bookings, setBookings] = useState<IBooking[]>([]);
+  const [update, setUpdate] = useState(false);
 
   useEffect(() => {
     async function getBookings() {
@@ -17,12 +18,18 @@ export const AdminTableBody = (props: AdminTableBodyProps) => {
       setBookings(bookings);
     }
     getBookings();
-  }, [props.active]);
+  }, [props.active, update]);
 
   return (
     <tbody>
       {bookings.map((booking) => (
-        <AdminTableRow booking={booking} key={booking._id} />
+        <AdminTableRow
+          setUpdate={setUpdate}
+          update={update}
+          active={props.active}
+          booking={booking}
+          key={booking._id}
+        />
       ))}
     </tbody>
   );
