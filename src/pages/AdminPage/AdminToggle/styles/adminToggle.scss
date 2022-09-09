@@ -10,6 +10,8 @@
     border-radius: 10px;
     margin-bottom: 20px;
     user-select: none;
+    cursor: pointer;
+
 
     div{
         display: flex;
@@ -18,11 +20,23 @@
         width: 50%;
         height: 100%;
         color: gray;
-        cursor: pointer;
+        z-index: -1;
 
         &.active{
             background-color: $dark-pink;
             color:black;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .admin__toggle{
+        border: 2px solid black;
+
+        div{
+
+            &.active{
+                background-color: $darker-pink
+            }
         }
     }
 }

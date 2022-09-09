@@ -12,6 +12,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 .admin__toggle div {
   display: flex;
@@ -20,9 +21,18 @@
   width: 50%;
   height: 100%;
   color: gray;
-  cursor: pointer;
+  z-index: -1;
 }
 .admin__toggle div.active {
   background-color: #ffc1d1;
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .admin__toggle {
+    border: 2px solid black;
+  }
+  .admin__toggle div.active {
+    background-color: rgba(216, 112, 147, 0.951);
+  }
 }/*# sourceMappingURL=adminToggle.css.map */
