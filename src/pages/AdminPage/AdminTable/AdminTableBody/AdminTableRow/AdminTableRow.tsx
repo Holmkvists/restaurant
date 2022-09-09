@@ -14,6 +14,7 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
   const [visitors, setVisitors] = useState(props.booking.visitors);
 
   const [isEditable, setIsEditable] = useState(false);
+  const [error, setError] = useState({});
   const [style, setStyle] = useState({ backgroundColor: "transparent" });
 
   const handleEdit = () => {
@@ -32,10 +33,15 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       visitors,
       originalEmail,
     };
-    await updateBooking(booking);
-    setIsEditable(false);
-    setStyle({ backgroundColor: "transparent" });
-    props.setUpdate(!props.update);
+    const isUpdated = await updateBooking(booking);
+    if (isUpdated) {
+      setIsEditable(false);
+      setStyle({ backgroundColor: "transparent" });
+      props.setUpdate(!props.update);
+      setError({});
+      return;
+    }
+    setError({ border: "5px solid red" });
   };
 
   async function handleDelete() {
@@ -46,7 +52,7 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
   }
 
   return (
-    <tr>
+    <tr style={error}>
       <td>{id}</td>
       <td
         style={style}

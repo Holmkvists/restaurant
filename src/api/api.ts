@@ -93,13 +93,18 @@ export const submitBooking = async (booking: IUserBooking) => {
  */
 export const updateBooking = async (booking: IBooking) => {
   try {
-    await fetch(`${API_URL}/bookings/patchBooking`, {
+    const result = await fetch(`${API_URL}/bookings/patchBooking`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(booking),
     });
+    const data = await result.json();
+    if (data.error) {
+      return false;
+    }
+    return true;
   } catch (error) {
     console.log(error);
   }
