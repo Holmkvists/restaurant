@@ -79,7 +79,7 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
       <div className="date-time__div">
         <div className="date__time-container">
           <div className="date__input-label">
-            <label htmlFor="">Välj datum</label>
+            <label htmlFor="">1. Välj datum</label>
             <input
               onChange={(e) => setDate(e.target.value)}
               type="date"
@@ -88,9 +88,8 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               className="date__input"
             />
           </div>
-          {/* <div className="visitors__container"> */}
           <div className="date__input-label">
-            <label htmlFor="">Välj antal personer</label>
+            <label htmlFor="">2. Välj antal personer</label>
             <input
               onChange={editVisitors}
               type="number"
@@ -101,11 +100,10 @@ export const DateAndTime = (props: IDateAndTimeProps) => {
               data-cy="visitorInput"
               className="amount__input"
             />
-            {/* </div> */}
           </div>
         </div>
         <div className="radio__btn-container">
-          <label htmlFor="">Välj en tid</label>
+          <label htmlFor="">3. Välj en tid</label>
           <div className="booking__radiolabel">
             <div>
               <input

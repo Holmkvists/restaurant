@@ -1,26 +1,11 @@
 @import "../../../variables/variables.css";
 
-.datetime__container{
+.datetime__container {
   padding: 5%;
 }
 
 @media only screen and (max-width: 600px) {
   .hero__container .booking__content .form__container {
     width: 92%;
-  }
-
-  .date__time-container {
-    border: 1px rgb(255, 255, 53);
-  }
-
-  .hero__container .date__time-container {
-    display: block;
-    width: 160px;
-    margin-left: 88px;
-  }
-  .radio__btn-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 88px;
   }
 }

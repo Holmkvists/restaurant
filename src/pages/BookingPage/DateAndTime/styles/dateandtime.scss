@@ -15,9 +15,11 @@
     align-items: center;
     margin-top: 100px;
     flex-direction: column;
+
     .form__container {
       background-color: #ffc1d1f1;
       width: 500px;
+      height: 460px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -69,23 +71,15 @@
     height: 60px;
     flex-grow: 1;
   }
-  .date__time-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  .date__input,
+  .amount__input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
   }
+
   .fullybooked__msg {
     margin: 20px 0 0 0;
   }
-}
-
-@media only screen and (min-width: 600px) {
-  .next__btn-container {
-    justify-content: space-evenly;
-  }
-
-  .fullybooked__msg {
-    margin: 0;
-  }
-
 }

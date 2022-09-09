@@ -59,6 +59,7 @@ export const SignUpInfo = (props: ISignUpInfo) => {
         <div className="user-input__container">
           <label htmlFor="">Förnamn</label>
           <input
+            required
             onChange={handleChange}
             type="text"
             className="user-input"
@@ -68,6 +69,7 @@ export const SignUpInfo = (props: ISignUpInfo) => {
         <div className="user-input__container">
           <label htmlFor="">Telefonnummer</label>
           <input
+            required
             onChange={handleChange}
             type="text"
             className="user-input"
@@ -77,6 +79,7 @@ export const SignUpInfo = (props: ISignUpInfo) => {
         <div className="user-input__container">
           <label htmlFor="">Epostadress</label>
           <input
+            required
             onChange={handleChange}
             type="text"
             className="user-input"
