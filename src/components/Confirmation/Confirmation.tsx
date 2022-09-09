@@ -21,9 +21,10 @@ export const Confirmation = (props: ConfirmationProps) => {
   // DELETES BOOKING FROM DATABASE IF USER IS DIRECTED TO
   // THIS PAGE THROUGH CANCELLATION LINK IN RECEIVED EMAIL
   useEffect(() => {
-    if (id && props.type != "bokningsbekraftelse") {
+    if (id && props.type !== "bokningsbekraftelse") {
       cancelBooking(id);
     }
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -31,20 +32,20 @@ export const Confirmation = (props: ConfirmationProps) => {
       <main className="confirmation">
         <Header />
         <div className="confirmation__message">
-          {props.type == "bokningsbekraftelse" ? (
+          {props.type === "bokningsbekraftelse" ? (
             <>
               <img src="/assets/happy-smiley.png" alt="happy-smiley" />
               <p>
-                Din tid har nu bokats. Passa på att spana in vår meny{" "}
-                <Link to="/meny">här!</Link>
+                Din tid har nu bokats. Passa på att spana in vår meny
+                <Link to="/meny"> här!</Link>
               </p>
             </>
           ) : (
             <>
               <img src="/assets/sad-smiley.png" alt="sad-smiley" />
               <p>
-                Din tid har avbokats. Boka en ny tid{" "}
-                <Link to="/boka-bord">här!</Link>
+                Din tid har avbokats. Boka en ny tid
+                <Link to="/boka-bord"> här!</Link>
               </p>
             </>
           )}

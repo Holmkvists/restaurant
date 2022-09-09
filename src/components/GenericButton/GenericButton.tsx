@@ -18,8 +18,7 @@ export const GenericButton = (props: IGenericProps) => {
       <button
         className="generic__btn"
         onClick={props.handleClick}
-        style={styleObject}
-      >
+        style={styleObject}>
         {props.children}
       </button>
     </div>

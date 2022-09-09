@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+.hero__container {
+  background-image: url("../../../../../public/assets/resturant.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__container .hero__filter {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.273);
+}
+.hero__container .booking__content {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+.hero__container .booking__content .form__container {
+  background-color: rgba(255, 193, 209, 0.9450980392);
+  height: 380px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+.hero__container .next__btn {
+  justify-content: center;
+}
+.hero__container .next__btn:disabled {
+  padding: 3px;
+  width: 100px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.hero__container .next__btn:enabled {
+  padding: 3px;
+  width: 100px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.hero__container .next__btn:enabled:hover {
+  transform: scale(1.03);
+  transition: ease-in-out 0.2s;
+}
+.hero__container .heading__container {
+  padding: 20px;
+}
+.hero__container .heading__container .heading__h1 {
+  text-decoration: underline;
+}
+.hero__container .date__input-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.hero__container .next__btn-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  flex-grow: 1;
+}
+.hero__container .date__time-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero__container .fullybooked__msg {
+  position: absolute;
+  bottom: 10%;
+}
+
+@media only screen and (min-width: 600px) {
+  .next__btn-container {
+    justify-content: space-evenly;
+  }
+  .fullybooked__msg {
+    position: relative;
+  }
+}/*# sourceMappingURL=dateandtime.css.map */

@@ -1,7 +1,7 @@
 import { Address } from "components/Address/Address";
 import { Header } from "components/Header/Header";
 import "./styles/contact.css";
-export const Contact = () => {
+export const ContactPage = () => {
   return (
     <div className="image__container">
       <div className="background__filter">

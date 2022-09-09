@@ -8,7 +8,7 @@ const API_URL = "http://localhost:8080" as const;
 
 /**
  * Fetches all current bookings from  the API
- * @returns An array of current bookings
+ * @returns {Promise<IBooking[]>} An array of current bookings
  */
 export const getAllBookings = async (): Promise<IBooking[]> => {
   try {
@@ -21,7 +21,14 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   }
 };
 
-export const getAvailableBookings = async (
+/**
+ * Checks if there is room for this booking at the provided date/time
+ * @param date Date of the booking
+ * @param time Time of the booking
+ * @param visitors Amount of visitors
+ * @returns {boolean} True/False
+ */
+export const checkEnoughTables = async (
   date: string,
   time: string,
   visitors: string
@@ -35,7 +42,10 @@ export const getAvailableBookings = async (
     );
 
     const body = await response.json();
-    console.log(body.data);
+
+    if (typeof body.data[0] !== "boolean") {
+      return false;
+    }
 
     return body.data[0];
   } catch (error) {
@@ -44,40 +54,39 @@ export const getAvailableBookings = async (
   }
 };
 
-export const postBooking = async (booking: IUserBooking) => {
+/**
+ * Submits a booking to he server.
+ * @param booking
+ */
+export const submitBooking = async (booking: IUserBooking) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/createBooking`, {
+    await fetch(`${API_URL}/bookings/createBooking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(booking),
     });
-    return response.status == 200 ? true : false;
   } catch (error) {
     console.log(error);
-    return false;
   }
 };
 
 /**
  * Updates a booking by sending a patch request
  * @param booking IBooking
- * @returns A boolean indicating success or fail
  */
-export const patchBooking = async (booking: IBooking) => {
+export const updateBooking = async (booking: IBooking) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/patchBooking`, {
+    await fetch(`${API_URL}/bookings/patchBooking`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(booking),
     });
-    return response.status == 200 ? true : false;
   } catch (error) {
     console.log(error);
-    return false;
   }
 };
 
@@ -87,7 +96,7 @@ export const patchBooking = async (booking: IBooking) => {
  */
 export const cancelBooking = async (bookingId: string) => {
   try {
-    const response = await fetch(`${API_URL}/bookings/cancelBooking`, {
+    await fetch(`${API_URL}/bookings/cancelBooking`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

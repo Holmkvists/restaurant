@@ -1,7 +1,7 @@
-import { postBooking } from "api/api";
+import { submitBooking } from "api/api";
 import { IUserBooking } from "models/IUserBooking";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./styles/signupinfo.css";
 
 interface ISignUpInfo {
@@ -16,20 +16,19 @@ export const SignUpInfo = (props: ISignUpInfo) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newBooking = { ...props.booking };
-    if (e.target.name == "name") {
+    if (e.target.name === "name") {
       newBooking.name = e.target.value;
     }
 
-    if (e.target.name == "phone") {
+    if (e.target.name === "phone") {
       newBooking.phone = e.target.value;
     }
 
-    if (e.target.name == "email") {
+    if (e.target.name === "email") {
       newBooking.email = e.target.value;
     }
 
     props.setBooking(newBooking);
-    console.log(newBooking);
   };
 
   useEffect(() => {
@@ -39,13 +38,16 @@ export const SignUpInfo = (props: ISignUpInfo) => {
   }, [props.booking]);
 
   const handleSubmit = async () => {
-    await postBooking(props.booking);
+    await submitBooking(props.booking);
     redirect("/bokningsbekraftelse");
   };
 
   return (
     <div className="signup__container">
-      <button onClick={() => props.setDateSelected(false)}>
+      <button
+        className="arrow__btn"
+        onClick={() => props.setDateSelected(false)}
+      >
         <i className="gg-arrow-left"></i>
       </button>
       <header className="signup__header">

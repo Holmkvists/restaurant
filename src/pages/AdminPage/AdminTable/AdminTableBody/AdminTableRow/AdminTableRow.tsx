@@ -1,4 +1,4 @@
-import { patchBooking } from "api/api";
+import { updateBooking } from "api/api";
 import { GenericButton } from "components/GenericButton/GenericButton";
 import { IBooking } from "models/IBooking";
 import { useState } from "react";
@@ -7,6 +7,7 @@ import "./styles/adminTableRow.css";
 export const AdminTableRow = (props: AdminTableRowProps) => {
   const id = props.booking._id;
 
+  const originalEmail = props.booking.email;
   const [date, setDate] = useState(props.booking.date);
   const [time, setTime] = useState(props.booking.time);
   const [email, setEmail] = useState(props.booking.email);
@@ -29,8 +30,9 @@ export const AdminTableRow = (props: AdminTableRowProps) => {
       date,
       time,
       visitors,
+      originalEmail,
     };
-    await patchBooking(booking);
+    await updateBooking(booking);
     setIsEditable(false);
     setStyle({ backgroundColor: "transparent" });
   };
